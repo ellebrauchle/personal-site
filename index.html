@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elle Brauchle — Selected Work</title>
+
+<!--
+  ============================================================
+  HOW TO EDIT THIS PAGE
+  Everything still to be filled in is marked  << REPLACE >> .
+  Search for that string. One place left:
+    1. The four project blocks
+  Your email and LinkedIn are already wired up in the footer.
+  No build step, no external files. Save and refresh.
+  ============================================================
+-->
+
+<style>
+  /* ---- color system: forest ground, warm cream, cider accent, sunset secondaries ----
+     Primary block fill is --cider. It has to stay light enough to carry FOREST text
+     (the surname block, the eyebrow) — a true deep rust drops that to ~3:1 and fails.
+     The deeper sunset tones are therefore used only where text sits ON cream, or
+     where cream/peach sits on them. Contrast vs forest #12402B / cream #FAF6EC:
+       cider  on cream-page, forest text ...... 4.9:1
+       peach  on forest ....................... 7.1:1
+       rust   text on cream ................... 4.6:1
+       clay   text on cream ................... 5.1:1
+       plum   text on cream ................... 7.3:1
+       dusk   text on cream ................... 6.6:1
+  */
+  :root {
+    --forest: #12402B;
+    --cream:  #FAF6EC;
+
+    /* primary accent — replaces the old bold yellow */
+    --cider:  #E29A46;
+
+    /* sunset secondaries, horizon → night */
+    --peach:  #F6C48F;
+    --rust:   #B5521E;
+    --clay:   #A84F26;
+    --plum:   #6B4560;
+    --dusk:   #3E5C6B;
+
+    --rule:   3px solid var(--forest);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--forest);
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-inline: clamp(20px, 5vw, 64px);
+  }
+
+  a { color: inherit; }
+
+  /* ---------------- masthead ---------------- */
+
+  header { padding-block: clamp(44px, 9vw, 110px) 0; }
+
+  .eyebrow {
+    display: inline-block;
+    background: var(--cider);
+    color: var(--forest);
+    font-size: clamp(11px, 1.4vw, 13px);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 7px 12px 6px;
+    margin-bottom: clamp(20px, 3vw, 32px);
+  }
+
+  h1 {
+    font-size: clamp(3.3rem, 15.5vw, 12rem);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  /* surname sits in a hard cider block — the page's loudest move */
+  h1 .block {
+    display: inline-block;
+    background: var(--cider);
+    padding: 0.04em 0.11em 0.08em;
+    margin-top: 0.06em;
+  }
+
+  .positioning {
+    font-size: clamp(1.25rem, 3.2vw, 2.1rem);
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    max-width: 22em;
+    margin: clamp(28px, 4vw, 44px) 0 0;
+  }
+
+  /* the highlight sits under body text, so it uses the lightest sunset tone */
+  .positioning em {
+    font-style: normal;
+    background: linear-gradient(transparent 60%, var(--peach) 60%, var(--peach) 94%, transparent 94%);
+  }
+
+  /* ---------------- section heading ---------------- */
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* the one sunset band on the page: horizon → night, left to right.
+       Falls back to the plain forest rule if border-image is unsupported. */
+    border-top: 6px solid var(--forest);
+    border-image: linear-gradient(90deg,
+      var(--cider) 0%,
+      var(--clay)  30%,
+      var(--rust)  52%,
+      var(--plum)  78%,
+      var(--dusk)  100%) 1;
+    margin-top: clamp(56px, 9vw, 120px);
+    padding-top: 14px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .section-head .count {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+  }
+
+  /* ---------------- project blocks ---------------- */
+
+  .work { list-style: none; margin: 0; padding: 0; }
+
+  .project {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr minmax(0, 20rem);
+    gap: clamp(12px, 3vw, 40px);
+    align-items: start;
+    border-bottom: var(--rule);
+    padding-block: clamp(26px, 4vw, 46px);
+    text-decoration: none;
+    transition: background-color 0.18s ease, color 0.18s ease, padding-inline 0.18s ease;
+  }
+
+  .num {
+    font-size: clamp(0.85rem, 1.3vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding-top: 0.55em;
+    opacity: 1; /* was 0.6 — these now carry colour, so they keep full contrast */
+  }
+
+  /* each number takes the next step down the sunset */
+  .work li:nth-child(1) .num { color: var(--rust); }
+  .work li:nth-child(2) .num { color: var(--clay); }
+  .work li:nth-child(3) .num { color: var(--plum); }
+  .work li:nth-child(4) .num { color: var(--dusk); }
+
+  .project h3 {
+    font-size: clamp(2rem, 6.6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .premise {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.38;
+    margin: 0;
+    padding-top: 0.35em;
+  }
+
+  .tags {
+    font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    margin: 1.1em 0 0;
+    opacity: 0.6;
+  }
+
+  /* hover / focus: the whole block flips to forest */
+  .project:hover,
+  .project:focus-visible {
+    background: var(--forest);
+    color: var(--cream);
+    outline: none;
+    padding-inline: clamp(12px, 2vw, 28px);
+  }
+
+  .project:hover h3,
+  .project:focus-visible h3 { color: var(--peach); }
+
+  /* on the forest flip, the deep sunset tones would go muddy — peach reads at 7:1 */
+  .project:hover .num,
+  .project:focus-visible .num { color: var(--peach); opacity: 0.85; }
+
+  /* ---------------- footer ---------------- */
+
+  footer { padding-block: clamp(56px, 9vw, 120px); }
+
+  footer h2 {
+    font-size: clamp(2.5rem, 11vw, 8rem);
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    margin: 0 0 clamp(28px, 4vw, 44px);
+    text-transform: uppercase;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+  }
+
+  .links a {
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: var(--rule);
+    padding: 13px 20px 11px;
+    transition: background-color 0.16s ease, color 0.16s ease;
+  }
+
+  .links a:hover,
+  .links a:focus-visible {
+    background: var(--cider);
+    color: var(--forest);
+    outline: none;
+  }
+
+  .colophon {
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: clamp(36px, 6vw, 64px) 0 0;
+  }
+
+  /* ---------------- narrow screens ---------------- */
+
+  @media (max-width: 720px) {
+    .project { grid-template-columns: 2.75rem 1fr; }
+    .num { padding-top: 0.35em; }
+    .project h3,
+    .project .premise,
+    .project .tags { grid-column: 2; }
+    .premise { padding-top: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">Selected Work &nbsp;/&nbsp; 2026</span>
+
+    <h1>Elle<br><span class="block">Brauchle</span></h1>
+
+    <p class="positioning">
+      MIT Sloan <em>MBA Candidate</em> 2028
+    </p>
+  </header>
+
+  <div class="section-head">
+    <h2>Four Projects</h2>
+    <span class="count">Scroll &darr;</span>
+  </div>
+
+  <!-- ============================================================
+       << REPLACE >>  THE FOUR PROJECTS
+       For each block, change: the title, the one-line premise,
+       the tag line, and the href. Keep one idea per premise —
+       the sentence is doing the persuading, not the layout.
+       ============================================================ -->
+  <ul class="work">
+
+    <li>
+      <a class="project" href="#">
+        <span class="num">01</span>
+        <div>
+          <h3>Project One</h3>
+          <p class="tags">Tag &nbsp;·&nbsp; Tag &nbsp;·&nbsp; Year</p>
+        </div>
+        <p class="premise">
+          One line on the premise. What was the odd idea, and what happened when
+          you actually built it? Resist summarizing — say the surprising part.
+        </p>
+      </a>
+    </li>
+
+    <li>
+      <a class="project" href="#">
+        <span class="num">02</span>
+        <div>
+          <h3>Project Two</h3>
+          <p class="tags">Tag &nbsp;·&nbsp; Tag &nbsp;·&nbsp; Year</p>
+        </div>
+        <p class="premise">
+          One line on the premise. What was the odd idea, and what happened when
+          you actually built it? Resist summarizing — say the surprising part.
+        </p>
+      </a>
+    </li>
+
+    <li>
+      <a class="project" href="#">
+        <span class="num">03</span>
+        <div>
+          <h3>Project Three</h3>
+          <p class="tags">Tag &nbsp;·&nbsp; Tag &nbsp;·&nbsp; Year</p>
+        </div>
+        <p class="premise">
+          One line on the premise. What was the odd idea, and what happened when
+          you actually built it? Resist summarizing — say the surprising part.
+        </p>
+      </a>
+    </li>
+
+    <li>
+      <a class="project" href="#">
+        <span class="num">04</span>
+        <div>
+          <h3>Project Four</h3>
+          <p class="tags">Tag &nbsp;·&nbsp; Tag &nbsp;·&nbsp; Year</p>
+        </div>
+        <p class="premise">
+          One line on the premise. What was the odd idea, and what happened when
+          you actually built it? Resist summarizing — say the surprising part.
+        </p>
+      </a>
+    </li>
+
+  </ul>
+
+  <footer>
+    <h2>Say&nbsp;hello</h2>
+    <nav class="links">
+      <a href="mailto:elleb@mit.edu">Email</a>
+      <a href="https://www.linkedin.com/in/ellebrauchle" rel="me">LinkedIn</a>
+    </nav>
+    <p class="colophon">MIT Sloan &nbsp;·&nbsp; MBA 2028</p>
+  </footer>
+
+</div>
+
+<!-- Ask my site: chat launcher and popup panel. The browser only ever talks to /api/chat on this site. -->
+<div id="ask-my-site" class="ask-my-site">
+  <div id="ask-my-site-panel" class="ask-my-site-panel" role="dialog" aria-label="Ask my site" hidden>
+    <div class="ask-my-site-header">
+      <h2 class="ask-my-site-title">Ask my site</h2>
+      <button type="button" id="ask-my-site-close" class="ask-my-site-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul id="ask-my-site-messages" class="ask-my-site-messages" aria-live="polite">
+      <li class="ask-my-site-note">Ask a question about what is on this page.</li>
+    </ul>
+    <form id="ask-my-site-form" class="ask-my-site-form" autocomplete="off">
+      <input id="ask-my-site-input" type="text" maxlength="600" placeholder="Ask a question…" aria-label="Your question" required>
+      <button type="submit" id="ask-my-site-send">Send</button>
+    </form>
+  </div>
+
+  <button type="button" id="ask-my-site-launcher" class="ask-my-site-launcher" aria-expanded="false" aria-controls="ask-my-site-panel">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-4.5 3.5V17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+    <span class="ask-my-site-label">Ask my site</span>
+  </button>
+
+  <style>
+    .ask-my-site {
+      /* Matched to the page: forest ground, warm cream, cider accent.
+         Set explicitly — the page's own --rule is a border *shorthand*, not a colour,
+         so it must not be inherited into these. */
+      --ask-my-site-forest:  #12402B;
+      --ask-my-site-cream:   #FAF6EC;
+      --ask-my-site-cider:   #E29A46;
+      --ask-my-site-peach:   #F6C48F;
+      --ask-my-site-accent:  #12402B;
+      --ask-my-site-rule:    #12402B;
+      --ask-my-site-surface: #FAF6EC;
+      --ask-my-site-ink:     #12402B;
+      display: contents; /* the wrapper draws no box of its own, so the page's layout is untouched */
+      font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.45;
+      text-align: left;
+    }
+    /* A clean slate. Whatever the page says about bare headings, lists, forms, inputs and buttons
+       stops here; every rule below this one wins over it. */
+    .ask-my-site :where(h2, ul, li, p, small, form, input, button) { all: revert; }
+    .ask-my-site,
+    .ask-my-site * { box-sizing: border-box; }
+    .ask-my-site svg { display: block; flex: none; width: 22px; height: 22px; max-width: none; fill: none; stroke: currentColor; }
+    .ask-my-site-close svg { width: 20px; height: 20px; }
+
+    /* Closed: one button, bottom-right, that stays put while the page scrolls.
+       Squared and hard-ruled, like the footer's Email / LinkedIn buttons. */
+    .ask-my-site-launcher {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 50px;
+      margin: 0;
+      padding: 0 20px 0 16px;
+      border: 3px solid var(--ask-my-site-forest);
+      border-radius: 0;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1;
+      white-space: nowrap;
+      color: var(--ask-my-site-forest);
+      background: var(--ask-my-site-cider);
+      box-shadow: 0 3px 0 var(--ask-my-site-forest);
+      cursor: pointer;
+      transition: background-color 0.16s ease, color 0.16s ease;
+    }
+    .ask-my-site-launcher:hover {
+      background: var(--ask-my-site-forest);
+      color: var(--ask-my-site-cider);
+    }
+
+    /* Open: a small panel above the button. */
+    .ask-my-site-panel {
+      position: fixed;
+      right: 20px;
+      bottom: 82px; /* 20px offset + 50px button + 12px gap */
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      width: 360px;
+      max-width: calc(100vw - 40px);
+      height: 520px;
+      max-height: calc(100vh - 100px);
+      max-height: calc(100dvh - 100px);
+      overflow: hidden;
+      color: var(--ask-my-site-ink);
+      background: var(--ask-my-site-surface);
+      border: 3px solid var(--ask-my-site-rule);
+      border-radius: 0;
+      box-shadow: 0 6px 0 rgba(18, 64, 43, 0.22);
+    }
+    .ask-my-site-panel[hidden] { display: none; }
+
+    /* Header: forest bar, cream label — the page's own inversion move. */
+    .ask-my-site-header {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 4px 4px 4px 16px;
+      color: var(--ask-my-site-cream);
+      background: var(--ask-my-site-forest);
+    }
+    .ask-my-site-title {
+      margin: 0;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      color: var(--ask-my-site-cream);
+    }
+    .ask-my-site-close {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      color: inherit;
+      background: transparent;
+      cursor: pointer;
+      transition: background-color 0.16s ease, color 0.16s ease;
+    }
+    .ask-my-site-close:hover {
+      background: var(--ask-my-site-cider);
+      color: var(--ask-my-site-forest);
+    }
+
+    /* The message list scrolls inside the panel. */
+    .ask-my-site-messages {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 0;
+      margin: 0;
+      padding: 14px;
+      list-style: none;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+    }
+    /* Answers: cream card, forest rule, forest text. Sentence case — body text stays readable. */
+    .ask-my-site-messages li {
+      align-self: flex-start;
+      max-width: 88%;
+      margin: 0;
+      padding: 10px 13px;
+      border: 2px solid var(--ask-my-site-rule);
+      border-radius: 0;
+      color: var(--ask-my-site-forest);
+      background: #fff;
+      font-size: 15px;
+      line-height: 1.42;
+      overflow-wrap: anywhere;
+    }
+    /* Questions: the cider block, forest text on it. */
+    .ask-my-site-messages li.ask-my-site-user {
+      align-self: flex-end;
+      border-color: var(--ask-my-site-forest);
+      color: var(--ask-my-site-forest);
+      background: var(--ask-my-site-cider);
+    }
+    .ask-my-site-messages li.ask-my-site-note {
+      max-width: none;
+      padding: 0;
+      border: 0;
+      background: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.5;
+      color: var(--ask-my-site-forest);
+      opacity: 0.75;
+    }
+    .ask-my-site-messages li p { margin: 0; white-space: pre-wrap; }
+    .ask-my-site-messages li small {
+      display: block;
+      margin-top: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ask-my-site-forest);
+      opacity: 0.8;
+    }
+
+    .ask-my-site-form {
+      display: flex;
+      flex: none;
+      gap: 8px;
+      margin: 0;
+      padding: 12px;
+      border-top: 3px solid var(--ask-my-site-rule);
+    }
+    .ask-my-site-form input {
+      flex: 1;
+      min-width: 0;
+      min-height: 46px;
+      margin: 0;
+      padding: 0 12px;
+      font-family: inherit;
+      font-size: 16px; /* below 16px, phones zoom the page when the input is focused */
+      color: var(--ask-my-site-forest);
+      background: #fff;
+      border: 2px solid var(--ask-my-site-forest);
+      border-radius: 0;
+    }
+    .ask-my-site-form input::placeholder { color: var(--ask-my-site-forest); opacity: 0.6; }
+    .ask-my-site-form button {
+      flex: none;
+      min-width: 72px;
+      min-height: 46px;
+      margin: 0;
+      padding: 0 16px;
+      border: 2px solid var(--ask-my-site-forest);
+      border-radius: 0;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ask-my-site-cream);
+      background: var(--ask-my-site-forest);
+      cursor: pointer;
+      transition: background-color 0.16s ease, color 0.16s ease;
+    }
+    .ask-my-site-form button:hover:not(:disabled) {
+      background: var(--ask-my-site-cider);
+      color: var(--ask-my-site-forest);
+    }
+    .ask-my-site-form button:disabled,
+    .ask-my-site-form input:disabled { opacity: 0.6; cursor: default; }
+
+    /* Keyboard focus is always visible. */
+    .ask-my-site button:focus-visible,
+    .ask-my-site input:focus-visible {
+      outline: 3px solid var(--ask-my-site-forest);
+      outline-offset: 2px;
+    }
+    .ask-my-site-close:focus-visible { outline-color: var(--ask-my-site-cider); outline-offset: -3px; }
+    .ask-my-site-form input:focus-visible { outline-offset: 0; }
+    .ask-my-site-launcher:focus-visible {
+      outline-offset: 3px;
+      box-shadow: 0 0 0 3px var(--ask-my-site-cream), 0 3px 0 var(--ask-my-site-forest);
+    }
+
+    /* Narrow screen: the panel spans the width and never exceeds the screen height. */
+    @media (max-width: 480px) {
+      .ask-my-site-launcher { right: 12px; bottom: 12px; }
+      .ask-my-site-panel {
+        left: 8px;
+        right: 8px;
+        bottom: 74px; /* 12px offset + 50px button + 12px gap */
+        width: auto;
+        max-width: none;
+        max-height: calc(100vh - 80px);
+        max-height: calc(100dvh - 80px);
+      }
+    }
+    /* Very narrow: the button collapses to its icon; the label stays for screen readers. */
+    @media (max-width: 340px) {
+      .ask-my-site-launcher { justify-content: center; width: 50px; padding: 0; }
+      .ask-my-site-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .ask-my-site-panel { animation: ask-my-site-open 0.16s ease-out; }
+      @keyframes ask-my-site-open {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: none; }
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ask-my-site * { transition: none !important; }
+    }
+
+    @media print {
+      .ask-my-site { display: none !important; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var panel = document.getElementById('ask-my-site-panel');
+      var launcher = document.getElementById('ask-my-site-launcher');
+      var closeButton = document.getElementById('ask-my-site-close');
+      var list = document.getElementById('ask-my-site-messages');
+      var form = document.getElementById('ask-my-site-form');
+      var input = document.getElementById('ask-my-site-input');
+      var button = document.getElementById('ask-my-site-send');
+      var history = []; // kept while the page is open, so closing the panel loses nothing
+
+      function openPanel() {
+        panel.hidden = false;
+        launcher.setAttribute('aria-expanded', 'true');
+        list.scrollTop = list.scrollHeight;
+        input.focus();
+      }
+
+      function closePanel() {
+        panel.hidden = true;
+        launcher.setAttribute('aria-expanded', 'false');
+        launcher.focus();
+      }
+
+      launcher.addEventListener('click', function () {
+        if (panel.hidden) openPanel(); else closePanel();
+      });
+      closeButton.addEventListener('click', closePanel);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !panel.hidden) closePanel();
+      });
+
+      function add(role, text, sources) {
+        var item = document.createElement('li');
+        item.className = 'ask-my-site-' + role;
+        var body = document.createElement('p');
+        body.textContent = text;
+        item.appendChild(body);
+        if (sources && sources.length) {
+          var note = document.createElement('small');
+          note.textContent = 'Sources: ' + sources.join(', ');
+          item.appendChild(note);
+        }
+        list.appendChild(item);
+        list.scrollTop = list.scrollHeight;
+        return item;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var question = input.value.trim();
+        if (!question) return;
+        add('user', question);
+        input.value = '';
+        input.disabled = true;
+        button.disabled = true;
+        var pending = add('assistant', 'Thinking…');
+
+        fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ question: question, history: history.slice(-6) })
+        })
+          .then(function (response) {
+            return response.json().catch(function () { return {}; }).then(function (data) {
+              return { status: response.status, data: data };
+            });
+          })
+          .then(function (result) {
+            pending.remove();
+            var data = result.data;
+            if (result.status === 200 && data && typeof data.answer === 'string') {
+              add('assistant', data.answer, data.files_used);
+              history.push({ role: 'user', content: question });
+              history.push({ role: 'assistant', content: data.answer });
+            } else if (result.status === 503) {
+              add('assistant', "This site's chat isn't set up yet.");
+            } else if (result.status === 429) {
+              add('assistant', 'Too many questions for now — try again in a few minutes.');
+            } else {
+              add('assistant', 'Something went wrong. Please try again.');
+            }
+          })
+          .catch(function () {
+            pending.remove();
+            add('assistant', 'Something went wrong. Please try again.');
+          })
+          .finally(function () {
+            input.disabled = false;
+            button.disabled = false;
+            if (!panel.hidden) input.focus();
+          });
+      });
+    })();
+  </script>
+</div>
+</body>
+</html>

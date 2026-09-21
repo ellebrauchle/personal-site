@@ -1,0 +1,12 @@
+{
+  "name": "ask-my-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ask my site: a small chat that answers visitors from the knowledge/ folder.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node dev.js"
+  }
+}

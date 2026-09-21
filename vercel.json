@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "api/chat.js": {
+      "includeFiles": "knowledge/**"
+    }
+  },
+  "routes": [
+    { "src": "^/knowledge[^/]*(/.*)?$", "status": 404 },
+    { "src": "^/dev\\.js$", "status": 404 },
+    { "src": "^/test(/.*)?$", "status": 404 },
+    { "src": "^/README(\\..*)?$", "status": 404 },
+    { "src": "^/widget(\\..*)?$", "status": 404 },
+    { "src": "^/package\\.json$", "status": 404 },
+    { "src": "^/vercel\\.json$", "status": 404 },
+    { "src": "^/\\.gitignore$", "status": 404 },
+    { "src": "^/\\.env.*$", "status": 404 },
+    { "src": "^/.*\\.zip$", "status": 404 }
+  ]
+}

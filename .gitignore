@@ -1,0 +1,6 @@
+.env
+.env*.local
+unanswered.log
+node_modules
+*.zip
+.vercel

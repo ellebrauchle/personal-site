@@ -1,0 +1,348 @@
+<!-- Ask my site: chat launcher and popup panel, pasted just before </body>. The browser only ever talks to /api/chat on this site. -->
+<div id="ask-my-site" class="ask-my-site">
+  <div id="ask-my-site-panel" class="ask-my-site-panel" role="dialog" aria-label="Ask my site" hidden>
+    <div class="ask-my-site-header">
+      <h2 class="ask-my-site-title">Ask my site</h2>
+      <button type="button" id="ask-my-site-close" class="ask-my-site-close" aria-label="Close chat">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ul id="ask-my-site-messages" class="ask-my-site-messages" aria-live="polite">
+      <li class="ask-my-site-note">Ask a question about what is on this page.</li>
+    </ul>
+    <form id="ask-my-site-form" class="ask-my-site-form" autocomplete="off">
+      <input id="ask-my-site-input" type="text" maxlength="600" placeholder="Ask a question…" aria-label="Your question" required>
+      <button type="submit" id="ask-my-site-send">Send</button>
+    </form>
+  </div>
+
+  <button type="button" id="ask-my-site-launcher" class="ask-my-site-launcher" aria-expanded="false" aria-controls="ask-my-site-panel">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-4.5 3.5V17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+    <span class="ask-my-site-label">Ask my site</span>
+  </button>
+
+  <style>
+    .ask-my-site {
+      /* Restyle here: these four values set the whole look. */
+      --ask-my-site-accent: var(--accent, #1c4e80);
+      --ask-my-site-rule: var(--rule, rgba(0, 0, 0, 0.16));
+      --ask-my-site-surface: #fff;
+      --ask-my-site-ink: #1f2328;
+      display: contents; /* the wrapper draws no box of its own, so the page's layout is untouched */
+      font-family: inherit;
+      font-size: 16px;
+      line-height: 1.45;
+      text-align: left;
+    }
+    /* A clean slate. Whatever the page says about bare headings, lists, forms, inputs and buttons
+       stops here; every rule below this one wins over it. */
+    .ask-my-site :where(h2, ul, li, p, small, form, input, button) { all: revert; }
+    .ask-my-site,
+    .ask-my-site * { box-sizing: border-box; }
+    .ask-my-site svg { display: block; flex: none; width: 22px; height: 22px; max-width: none; fill: none; stroke: currentColor; }
+    .ask-my-site-close svg { width: 20px; height: 20px; }
+
+    /* Closed: one button, bottom-right, that stays put while the page scrolls. */
+    .ask-my-site-launcher {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      margin: 0;
+      padding: 0 18px 0 14px;
+      border: 0;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+      color: #fff;
+      background: var(--ask-my-site-accent);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+    }
+    .ask-my-site-launcher:hover,
+    .ask-my-site-form button:hover:not(:disabled) { filter: brightness(0.92); }
+
+    /* Open: a small panel above the button. */
+    .ask-my-site-panel {
+      position: fixed;
+      right: 20px;
+      bottom: 80px; /* 20px offset + 48px button + 12px gap */
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      width: 360px;
+      max-width: calc(100vw - 40px);
+      height: 520px;
+      max-height: calc(100vh - 100px);
+      max-height: calc(100dvh - 100px);
+      overflow: hidden;
+      color: var(--ask-my-site-ink);
+      background: var(--ask-my-site-surface);
+      border: 1px solid var(--ask-my-site-rule);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+    .ask-my-site-panel[hidden] { display: none; }
+
+    .ask-my-site-header {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 4px 4px 4px 16px;
+      border-bottom: 1px solid var(--ask-my-site-rule);
+    }
+    .ask-my-site-title {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .ask-my-site-close {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 8px;
+      color: inherit;
+      background: transparent;
+      cursor: pointer;
+    }
+    .ask-my-site-close:hover { background: rgba(0, 0, 0, 0.06); }
+
+    /* The message list scrolls inside the panel. */
+    .ask-my-site-messages {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 0;
+      margin: 0;
+      padding: 14px;
+      list-style: none;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+    }
+    .ask-my-site-messages li {
+      align-self: flex-start;
+      max-width: 88%;
+      margin: 0;
+      padding: 9px 12px;
+      border: 1px solid var(--ask-my-site-rule);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.035);
+      font-size: 15px;
+      overflow-wrap: anywhere;
+    }
+    .ask-my-site-messages li.ask-my-site-user {
+      align-self: flex-end;
+      border-color: var(--ask-my-site-accent);
+      background: transparent;
+    }
+    .ask-my-site-messages li.ask-my-site-note {
+      max-width: none;
+      padding: 0;
+      border: 0;
+      background: none;
+      opacity: 0.75;
+    }
+    .ask-my-site-messages li p { margin: 0; white-space: pre-wrap; }
+    .ask-my-site-messages li small { display: block; margin-top: 6px; font-size: 13px; opacity: 0.7; }
+
+    .ask-my-site-form {
+      display: flex;
+      flex: none;
+      gap: 8px;
+      margin: 0;
+      padding: 10px 12px 12px;
+      border-top: 1px solid var(--ask-my-site-rule);
+    }
+    .ask-my-site-form input {
+      flex: 1;
+      min-width: 0;
+      min-height: 44px;
+      margin: 0;
+      padding: 0 12px;
+      font: inherit;
+      font-size: 16px; /* below 16px, phones zoom the page when the input is focused */
+      color: inherit;
+      background: var(--ask-my-site-surface);
+      border: 1px solid rgba(0, 0, 0, 0.45);
+      border-radius: 8px;
+    }
+    .ask-my-site-form button {
+      flex: none;
+      min-width: 64px;
+      min-height: 44px;
+      margin: 0;
+      padding: 0 16px;
+      border: 0;
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 600;
+      color: #fff;
+      background: var(--ask-my-site-accent);
+      cursor: pointer;
+    }
+    .ask-my-site-form button:disabled,
+    .ask-my-site-form input:disabled { opacity: 0.6; cursor: default; }
+
+    /* Keyboard focus is always visible. */
+    .ask-my-site button:focus-visible,
+    .ask-my-site input:focus-visible {
+      outline: 2px solid var(--ask-my-site-accent);
+      outline-offset: 2px;
+    }
+    .ask-my-site-form input:focus-visible { outline-offset: 0; border-color: var(--ask-my-site-accent); }
+    .ask-my-site-launcher:focus-visible {
+      outline-offset: 3px;
+      box-shadow: 0 0 0 3px #fff, 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Narrow screen: the panel spans the width and never exceeds the screen height. */
+    @media (max-width: 480px) {
+      .ask-my-site-launcher { right: 12px; bottom: 12px; }
+      .ask-my-site-panel {
+        left: 8px;
+        right: 8px;
+        bottom: 72px; /* 12px offset + 48px button + 12px gap */
+        width: auto;
+        max-width: none;
+        max-height: calc(100vh - 80px);
+        max-height: calc(100dvh - 80px);
+      }
+    }
+    /* Very narrow: the button collapses to its icon; the label stays for screen readers. */
+    @media (max-width: 340px) {
+      .ask-my-site-launcher { justify-content: center; width: 48px; padding: 0; }
+      .ask-my-site-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .ask-my-site-panel { animation: ask-my-site-open 0.16s ease-out; }
+      @keyframes ask-my-site-open {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: none; }
+      }
+    }
+
+    @media print {
+      .ask-my-site { display: none !important; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var panel = document.getElementById('ask-my-site-panel');
+      var launcher = document.getElementById('ask-my-site-launcher');
+      var closeButton = document.getElementById('ask-my-site-close');
+      var list = document.getElementById('ask-my-site-messages');
+      var form = document.getElementById('ask-my-site-form');
+      var input = document.getElementById('ask-my-site-input');
+      var button = document.getElementById('ask-my-site-send');
+      var history = []; // kept while the page is open, so closing the panel loses nothing
+
+      function openPanel() {
+        panel.hidden = false;
+        launcher.setAttribute('aria-expanded', 'true');
+        list.scrollTop = list.scrollHeight;
+        input.focus();
+      }
+
+      function closePanel() {
+        panel.hidden = true;
+        launcher.setAttribute('aria-expanded', 'false');
+        launcher.focus();
+      }
+
+      launcher.addEventListener('click', function () {
+        if (panel.hidden) openPanel(); else closePanel();
+      });
+      closeButton.addEventListener('click', closePanel);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !panel.hidden) closePanel();
+      });
+
+      function add(role, text, sources) {
+        var item = document.createElement('li');
+        item.className = 'ask-my-site-' + role;
+        var body = document.createElement('p');
+        body.textContent = text;
+        item.appendChild(body);
+        if (sources && sources.length) {
+          var note = document.createElement('small');
+          note.textContent = 'Sources: ' + sources.join(', ');
+          item.appendChild(note);
+        }
+        list.appendChild(item);
+        list.scrollTop = list.scrollHeight;
+        return item;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var question = input.value.trim();
+        if (!question) return;
+        add('user', question);
+        input.value = '';
+        input.disabled = true;
+        button.disabled = true;
+        var pending = add('assistant', 'Thinking…');
+
+        fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ question: question, history: history.slice(-6) })
+        })
+          .then(function (response) {
+            return response.json().catch(function () { return {}; }).then(function (data) {
+              return { status: response.status, data: data };
+            });
+          })
+          .then(function (result) {
+            pending.remove();
+            var data = result.data;
+            if (result.status === 200 && data && typeof data.answer === 'string') {
+              add('assistant', data.answer, data.files_used);
+              history.push({ role: 'user', content: question });
+              history.push({ role: 'assistant', content: data.answer });
+            } else if (result.status === 503) {
+              add('assistant', "This site's chat isn't set up yet.");
+            } else if (result.status === 429) {
+              add('assistant', 'Too many questions for now — try again in a few minutes.');
+            } else {
+              add('assistant', 'Something went wrong. Please try again.');
+            }
+          })
+          .catch(function () {
+            pending.remove();
+            add('assistant', 'Something went wrong. Please try again.');
+          })
+          .finally(function () {
+            input.disabled = false;
+            button.disabled = false;
+            if (!panel.hidden) input.focus();
+          });
+      });
+    })();
+  </script>
+</div>

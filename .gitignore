@@ -4,3 +4,6 @@ unanswered.log
 node_modules
 *.zip
 .vercel
+
+# macOS writes these into every folder it opens — noise, never part of the site
+.DS_Store

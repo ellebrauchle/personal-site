@@ -1,0 +1,453 @@
+/* ============================================================
+   Elle Brauchle — personal site
+   Implements Claude Design direction 1a: "Top nav, classic pages"
+
+   Palette is the swatch row from the top of the wireframe sheet.
+   The _ds/ "Organic" system that ships in the handoff specifies a
+   different one (terracotta + olive, Caprasimo + Figtree) — it is
+   deliberately NOT used here. To switch, retune the tokens below.
+   ============================================================ */
+
+:root {
+  /* the five named swatches */
+  --forest:  #255551;
+  --sky:     #779BAD;
+  --sand:    #ECE9DF;
+  --sunrise: #EECB8E;
+  --sunset:  #DC8672;
+
+  /* grounds and ink */
+  --bg:      #FAF8F3;  /* page ground — sand is too heavy full-bleed */
+  --surface: #ECE9DF;  /* sand, used for rules, fills and placeholder bars */
+  --ink:     #255551;  /* headings */
+  --body:    #474238;  /* running text */
+  --muted:   #7A756A;
+
+  /* the three project-card fills, taken from the wireframe's HOME row */
+  --card-1: #DB986C;
+  --card-2: #ACA269;
+  --card-3: #E3CD9B;
+
+  /* ink that clears 4.5:1 on each card fill */
+  --card-1-ink: #5A2E0F;
+  --card-2-ink: #33381C;
+  --card-3-ink: #6B4708;
+
+  --measure: 1140px;
+  --radius:  14px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body);
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding-inline: clamp(20px, 5vw, 56px);
+}
+
+h1, h2, h3 {
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 3.9rem); font-weight: 900; }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); font-weight: 700; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.3rem);  font-weight: 700; }
+
+a { color: inherit; }
+
+/* the handwriting face is an accent only — never running text */
+.script { font-family: Caveat, cursive; }
+
+/* ---------------- top nav ---------------- */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+  border-bottom: 2px dashed var(--surface);
+}
+
+.nav-brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(14px, 2.4vw, 30px);
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  font-style: italic;   /* the wireframe sets its nav in italic */
+  text-decoration: none;
+  color: var(--body);
+  padding-block: 4px;
+}
+
+.nav-links a:hover { color: var(--ink); }
+
+.nav-links a[aria-current="page"] {
+  font-weight: 700;
+  font-style: normal;
+  color: var(--ink);
+  border-bottom: 2px solid var(--sunset);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 6px;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+/* ---------------- home hero ---------------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 300px);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  padding-block: clamp(40px, 7vw, 86px);
+}
+
+.hero-intro {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  color: var(--forest);
+  margin: 14px 0 0;
+}
+
+.hero-bio {
+  font-style: italic;
+  max-width: 34em;
+  margin: 14px 0 0;
+}
+
+.portrait {
+  width: 100%;
+  height: auto;                  /* without this the img's height attr wins and
+                                    aspect-ratio is ignored — a 900px-tall photo */
+  aspect-ratio: 77 / 82;         /* the wireframe's portrait box */
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 40%;            /* the soft blob, straight from the sketch */
+  background: #AFB4AC;
+}
+
+/* ---------------- project cards ---------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2.2vw, 24px);
+  padding-bottom: clamp(16px, 3vw, 28px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 150px;
+  padding: 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(46, 43, 37, 0.16);
+  outline: none;
+}
+
+.card:focus-visible { outline: 3px solid var(--forest); outline-offset: 3px; }
+
+.card-1 { background: var(--card-1); color: var(--card-1-ink); }
+.card-2 { background: var(--card-2); color: var(--card-2-ink); }
+.card-3 { background: var(--card-3); color: var(--card-3-ink); }
+
+.card h3 {
+  font-family: Caveat, cursive;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: 0;
+}
+
+.card p {
+  font-family: Caveat, cursive;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0;
+  color: inherit;
+}
+
+.card-go {
+  margin-top: auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+  margin: 0 0 clamp(40px, 7vw, 80px);
+}
+
+/* ---------------- generic page head ---------------- */
+
+.page-head { padding-block: clamp(34px, 5vw, 62px) clamp(20px, 3vw, 34px); }
+
+.page-head p {
+  font-size: 1.05rem;
+  max-width: 38em;
+  margin: 12px 0 0;
+}
+
+.backlink {
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.backlink:hover { color: var(--ink); }
+
+/* ---------------- about ---------------- */
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) 1fr;
+  gap: clamp(24px, 5vw, 56px);
+  align-items: start;
+  padding-bottom: clamp(30px, 5vw, 56px);
+}
+
+.about-photo {
+  width: 100%;
+  height: auto;                  /* same reason as .portrait above */
+  aspect-ratio: 90 / 110;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 20px;          /* squarer than home, per the sketch */
+  background: #AFB4AC;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--body);
+}
+
+.tag-accent { background: #DDE7DC; color: #33472F; }
+
+/* ---------------- projects index ---------------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 3vw, 32px);
+  padding-bottom: clamp(40px, 7vw, 80px);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.project-thumb {
+  height: 165px;
+  border-radius: var(--radius);
+  transition: transform 0.16s ease;
+}
+
+.project:hover .project-thumb { transform: translateY(-3px); }
+
+.project h3 { font-size: 1.15rem; }
+.project p { font-size: 0.95rem; margin: 0; }
+
+.project-go {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+/* ---------------- case study ---------------- */
+
+.case-hero {
+  height: clamp(180px, 28vw, 300px);
+  border-radius: var(--radius);
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.case-body {
+  max-width: 34em;
+  padding-bottom: clamp(40px, 7vw, 80px);
+}
+
+.case-body h2 { margin-top: 34px; }
+.case-body p  { margin: 12px 0 0; }
+
+.pill {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 11px 22px;
+  border: 2px solid var(--forest);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--forest);
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.pill:hover,
+.pill:focus-visible {
+  background: var(--forest);
+  color: var(--bg);
+  outline: none;
+}
+
+.pill-solid {
+  background: var(--sunset);
+  border-color: var(--sunset);
+  color: #46180E;
+}
+
+.pill-solid:hover,
+.pill-solid:focus-visible { background: var(--forest); border-color: var(--forest); color: var(--bg); }
+
+/* ---------------- contact ---------------- */
+
+.contact {
+  background: #E8EFE4;          /* the pale-green ground from the sketch */
+  border-radius: 24px;
+  padding: clamp(30px, 6vw, 64px);
+  margin-bottom: clamp(40px, 7vw, 80px);
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-list svg { flex: none; color: var(--forest); }
+
+.contact-list a { color: var(--body); text-underline-offset: 3px; }
+.contact-list a:hover { color: var(--ink); }
+
+/* ---------------- footer ---------------- */
+
+.foot {
+  border-top: 2px dashed var(--surface);
+  padding-block: 26px 40px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.foot a { text-decoration: none; }
+.foot a:hover { color: var(--ink); }
+
+/* ---------------- narrow screens ---------------- */
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo { order: -1; max-width: 220px; }
+  .about { grid-template-columns: 1fr; }
+  .about-photo { max-width: 260px; }
+  .cards, .project-grid { grid-template-columns: 1fr; }
+}
+
+/* the nav collapses to ☰, as the wireframe note calls for */
+@media (max-width: 620px) {
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 50;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    background: var(--bg);
+    border-bottom: 2px dashed var(--surface);
+    box-shadow: 0 10px 20px rgba(46, 43, 37, 0.08);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    padding: 11px clamp(20px, 5vw, 56px);
+    font-style: normal;
+  }
+
+  .nav-links a[aria-current="page"] { border-bottom: 0; }
+
+  .nav { position: relative; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

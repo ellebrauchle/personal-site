@@ -493,8 +493,14 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 .tag-link {
   display: inline-block;
   text-decoration: none;
-  border: 1.5px solid transparent;
-  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+  /* sunrise, the palette's yellow — these are the one thing on About Me
+     meant to be clicked, so they carry the only saturated colour on the page */
+  background: var(--sunrise);
+  color: var(--body);
+  font-weight: 700;
+  padding: 7px 16px;
+  border: 1.5px solid #E2B870;
+  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
 }
 
 .tag-link::after {
@@ -507,8 +513,11 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   background: var(--forest);
   border-color: var(--forest);
   color: var(--bg);
+  transform: translateY(-2px);
   outline: none;
 }
+
+.tag-link:focus-visible { outline: 3px solid var(--forest); outline-offset: 3px; }
 
 .tag-link:hover::after,
 .tag-link:focus-visible::after { opacity: 1; }
@@ -613,17 +622,20 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 .sibling-nav a {
   font-size: 0.8rem;
-  padding: 5px 14px;
+  font-weight: 700;
+  padding: 6px 15px;
   border-radius: 999px;
-  background: var(--surface);
+  background: var(--sunrise);
   color: var(--body);
+  border: 1.5px solid #E2B870;
   text-decoration: none;
-  transition: background-color 0.16s ease, color 0.16s ease;
+  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
 }
 
 .sibling-nav a:hover,
 .sibling-nav a:focus-visible {
   background: var(--forest);
+  border-color: var(--forest);
   color: var(--bg);
   outline: none;
 }

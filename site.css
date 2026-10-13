@@ -306,7 +306,7 @@ a { color: inherit; }
   transition: transform 0.16s ease;
 }
 
-.project:hover .project-thumb { transform: translateY(-3px); }
+a.project:hover .project-thumb { transform: translateY(-3px); }
 
 .project h3 { font-size: 1.15rem; }
 .project p { font-size: 0.95rem; margin: 0; }
@@ -450,4 +450,37 @@ a { color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
+}
+
+/* A card with no destination yet (Project C) shares the tile styling but
+   must not pretend to be clickable. */
+.card:not(a) { cursor: default; }
+.card:not(a):hover { transform: none; box-shadow: none; }
+
+/* ---------------- projects: repo pill ---------------- */
+
+.repo-line {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 clamp(40px, 7vw, 80px);
+}
+
+.repo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #DDE7DC;
+  color: #33472F;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.repo-pill:hover,
+.repo-pill:focus-visible {
+  background: var(--forest);
+  color: var(--bg);
+  outline: none;
 }

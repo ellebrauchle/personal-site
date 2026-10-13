@@ -1,52 +1,110 @@
 # FAQ
 
-Answers drawn only from `index.html`. Where the page does not establish something,
-that is said plainly rather than filled in.
+Common visitor questions about Elle Brauchle, answered from her resume and this
+site. Where something is not established, that is said plainly rather than
+filled in. Last updated 2026-10-13.
 
-## 1. Who is this?
+## Who is Elle Brauchle?
 
-Elle Brauchle is an MBA Candidate at MIT Sloan, Class of 2028. This is her
-personal site, titled "Elle Brauchle — Selected Work."
+Elle Brauchle is a product manager and licensed architect. She is an MBA
+candidate at MIT Sloan, class of 2028, and spent the six years before that at
+SmithGroup, an architecture, engineering and planning firm.
 
-## 2. What does she do?
+## What does she do, and what is she looking for?
 
-The page describes her as a licensed architect turned MBA candidate, and offers no
-further description of her work. The line it uses is flagged in the page's own
-HTML as placeholder text awaiting a rewrite, so this should be treated as
-provisional.
+She describes herself as an architect turned product manager, looking to use her
+cross-functional collaboration, design, organization and leadership skills to
+build better products for users that need them. Her resume is targeted at
+product management roles.
 
-## 3. Where is she studying, and when does she finish?
+## Why did she move from architecture to product management?
 
-She is at MIT Sloan, in the MBA class of 2028 — both stated in the page footer.
-The page gives no other institution, degree, or date.
+Her architecture work was already product work in substance: coordinating
+engineering and design, running user research, setting OKRs, and building a data
+tool with a data science team. The MBA is the formal pivot into software product
+management.
 
-## 4. Is she a practicing architect?
+## Is she a practicing architect?
 
-The page describes her as a *licensed* architect who has since become an MBA
-candidate. It does not say whether she is currently in practice, where she was
-licensed, or when. Anything beyond the word "licensed" is not established here.
+She is a Registered California Architect, license C 40528, licensed during her
+time at SmithGroup. She left SmithGroup in 2026 to attend MIT Sloan, so she is
+not currently in architectural practice.
 
-## 5. What work is shown on the site?
+## Where did she study, and where did she go to undergrad?
 
-The site is built around a section headed "Four Projects," dated 2026. At present
-those four entries are unfilled template placeholders — titled "Project One"
-through "Project Four," with placeholder tags and premise text, and each linking
-nowhere. No actual project has been published yet.
+MIT Sloan School of Management for her MBA, expected May 2028. Before that, the
+University of Texas at Austin for her undergraduate degree, a Bachelor of
+Architecture with High Honors in 2020, including a semester abroad in Paris in fall 2018.
 
-## 6. Can I see case studies or detail on a project?
+## When does she graduate?
 
-Not yet. Each project block links to `#`, meaning no destination has been set, and
-the premise text in each is still the template's own instructional copy. There is
-nothing behind the links to read.
+May 2028.
 
-## 7. How do I get in touch?
+## Is she looking for an internship?
 
-The page has a "Say hello" footer with two links: email at elleb@mit.edu and
-LinkedIn at linkedin.com/in/ellebrauchle. Those are the only two contact methods
-given. No phone number, location, or form appears on the page.
+The site does not state her recruiting timeline or what she is currently seeking.
+The Contact page invites conversations about internships, product work, anything
+she is building, or a coffee. Email her at elleb@mit.edu to ask directly.
 
-## 8. Does she have a résumé, portfolio download, or other profiles?
+## What is her biggest project?
 
-No. The page offers only the email and LinkedIn links described above — there is no
-résumé, no downloadable portfolio, and no other social or professional profile
-linked anywhere on it.
+A $3.7 billion, 909,000 square foot, 14-story hospital, where she directed
+cross-functional coordination between engineering and design, resolving competing
+priorities and keeping schedules on track.
+
+## Does she have experience with user research?
+
+Yes. She designed and led a user research program for a targeted underserved
+audience, conducting more than 40 in-person and virtual interviews and
+synthesizing the findings into day-in-the-life stories, key themes and
+prioritized opportunity areas that became design requirements.
+
+## Does she have technical or data experience?
+
+She partnered with data science teams to build a consolidated data dashboard that
+cut distillation time by 30% across five projects, and analyzed eight data
+streams in ArcGIS for a 188-acre campus expansion. Her listed tools are Claude
+Code, Claude Design, Figma, A/B testing, user research, prototyping and ArcGIS.
+She is not described anywhere as a software engineer.
+
+## Has she managed people?
+
+She mentored five junior staff across three concurrent projects through weekly
+one-on-ones, coaching on communication and client-facing presentation skills,
+which contributed to multiple promotions and licensures. She also managed budget
+and schedule across internal staff and four consultant teams on a $300,000
+development.
+
+## What awards has she won?
+
+The Metropolis Arch 30 Under 30 Award in 2023 and again in 2025, and the 2025
+American Institute of Architects California Firm Mentorship Award for
+co-founding and co-leading SmithGroup's Licensure Committee and Site Visit
+Committee.
+
+## What work is shown on the site?
+
+Three projects: Petal Ping, a cycle notification app; Task Nest, a set of
+productivity tools; and Project C, which is unannounced. The site itself is a
+fourth thing she built.
+
+## Can I read a case study on a project?
+
+Not yet. No project has a written case study or its own page on the site. The
+Projects page links to her GitHub profile at github.com/ellebrauchle.
+
+## How do I get in touch?
+
+Email elleb@mit.edu, LinkedIn at linkedin.com/in/ellebrauchle, or GitHub at
+github.com/ellebrauchle. Those three are the only contact methods on the site.
+
+## Is her resume on the site?
+
+No. The site does not publish a resume or a downloadable portfolio. Email her to
+ask for one.
+
+## What does she do outside of work?
+
+She bikepacks, skis in the backcountry, climbs alpine trad routes, sketches and
+paints. She volunteers as a Court Appointed Special Advocate (CASA) in San
+Francisco.

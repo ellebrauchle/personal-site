@@ -484,3 +484,146 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   color: var(--bg);
   outline: none;
 }
+
+/* ---------------- resume section pages ---------------- */
+
+/* The five chips at the foot of About Me are links, not labels. */
+.tags-nav { gap: 10px; }
+
+.tag-link {
+  display: inline-block;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
+
+.tag-link::after {
+  content: " \2192";
+  opacity: 0.5;
+}
+
+.tag-link:hover,
+.tag-link:focus-visible {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--bg);
+  outline: none;
+}
+
+.tag-link:hover::after,
+.tag-link:focus-visible::after { opacity: 1; }
+
+.detail {
+  max-width: 44em;
+  padding-bottom: clamp(30px, 5vw, 50px);
+}
+
+.entry + .entry {
+  margin-top: clamp(32px, 5vw, 52px);
+  padding-top: clamp(32px, 5vw, 52px);
+  border-top: 2px dashed var(--surface);
+}
+
+.entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.entry-meta {
+  font-size: 0.88rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entry-sub {
+  font-weight: 700;
+  color: var(--forest);
+  margin: 8px 0 0;
+}
+
+.entry-note {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 8px 0 0;
+}
+
+.detail h3 {
+  margin-top: 26px;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--forest);
+}
+
+.detail ul {
+  margin: 12px 0 0;
+  padding-left: 1.1em;
+}
+
+.detail li { margin-bottom: 9px; }
+
+.detail li::marker { color: var(--sunset); }
+
+/* a plain row of chips, no bullets — used on Skills */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip-list li::marker { content: none; }
+
+/* photo grid, ready for Interests */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.gallery figure { margin: 0; }
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.gallery figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* move between the five sections without going back to About */
+.sibling-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: clamp(40px, 7vw, 70px);
+}
+
+.sibling-nav a {
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--body);
+  text-decoration: none;
+  transition: background-color 0.16s ease, color 0.16s ease;
+}
+
+.sibling-nav a:hover,
+.sibling-nav a:focus-visible {
+  background: var(--forest);
+  color: var(--bg);
+  outline: none;
+}

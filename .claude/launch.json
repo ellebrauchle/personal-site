@@ -4,8 +4,11 @@
     {
       "name": "personal-site",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
-      "port": 3000
+      "runtimeArgs": [
+        "start"
+      ],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }

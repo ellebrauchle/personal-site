@@ -100,8 +100,16 @@ github.com/ellebrauchle. Those three are the only contact methods on the site.
 
 ## Is her resume on the site?
 
-No. The site does not publish a resume or a downloadable portfolio. Email her to
-ask for one.
+Most of its content is. The About page links to five sections drawn from her
+resume: Education, Experience, Awards and Accreditations, Skills, and Interests.
+There is no downloadable resume file or PDF. Email her at elleb@mit.edu to ask
+for one.
+
+## What is on the About page?
+
+A short bio and five linked sections: Education, Experience, Awards and
+Accreditations, Skills, and Interests. Each opens its own page with the detail
+from her resume. Volunteering is listed under Interests.
 
 ## What does she do outside of work?
 

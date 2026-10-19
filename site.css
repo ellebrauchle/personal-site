@@ -670,9 +670,10 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   margin: 4px auto 22px;
 }
 
-/* The MIT lockup is squarer than UT's wordmark, so matching heights leaves it
-   looking the smaller of the two. Match their widths instead. */
-.entry--mit .panel-logo { height: clamp(55px, 6.8vw, 83px); }
+/* The MIT lockup is wider per unit height than UT's wordmark, so a shared
+   height would leave it the narrower mark. Match their widths instead:
+   4.28 against 3.57 means 83% of UT's height. */
+.entry--mit .panel-logo { height: clamp(37px, 4.5vw, 55px); }
 
 @media (max-width: 760px) {
   .detail--panels { grid-template-columns: 1fr; }

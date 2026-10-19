@@ -8,6 +8,7 @@
     { "src": "^/knowledge[^/]*(/.*)?$", "status": 404 },
     { "src": "^/dev\\.js$", "status": 404 },
     { "src": "^/test(/.*)?$", "status": 404 },
+    { "src": "^/tools(/.*)?$", "status": 404 },
     { "src": "^/README(\\..*)?$", "status": 404 },
     { "src": "^/widget(\\..*)?$", "status": 404 },
     { "src": "^/package\\.json$", "status": 404 },

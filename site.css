@@ -136,7 +136,7 @@ a { color: inherit; }
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr minmax(0, 300px);
+  grid-template-columns: 1fr minmax(0, 400px);
   gap: clamp(24px, 5vw, 64px);
   align-items: center;
   padding-block: clamp(40px, 7vw, 86px);
@@ -154,6 +154,16 @@ a { color: inherit; }
   max-width: 34em;
   margin: 14px 0 0;
 }
+
+/* The invitation under the bio — set upright, so it reads as Elle talking to
+   the visitor rather than as more of the italic blurb above it. */
+.hero-welcome {
+  max-width: 34em;
+  margin: 26px 0 0;
+}
+
+.hero-welcome a { color: var(--forest); }
+.hero-welcome a:hover { color: var(--sunset); }
 
 .portrait {
   width: 100%;
@@ -222,13 +232,6 @@ a { color: inherit; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.85;
-}
-
-.hero-note {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: var(--muted);
-  margin: 0 0 clamp(40px, 7vw, 80px);
 }
 
 /* ---------------- generic page head ---------------- */
@@ -465,10 +468,20 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 /* ---------------- projects: repo pill ---------------- */
 
+/* The repo link rides in the page header, opposite the title, and drops
+   under it once the two can no longer share a line. */
+.page-head--split {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px 28px;
+  flex-wrap: wrap;
+}
+
 .repo-line {
   display: flex;
   justify-content: flex-end;
-  margin: 0 0 clamp(40px, 7vw, 80px);
+  margin: 0;
 }
 
 .repo-pill {
@@ -493,7 +506,7 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 /* ---------------- resume section pages ---------------- */
 
-/* The five chips at the foot of About Me are links, not labels. */
+/* The five chips under the About Me title are links, not labels. */
 .tags-nav { gap: 10px; }
 
 .tag-link {

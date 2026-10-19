@@ -42,10 +42,6 @@
   --mit-wash: #EBE2DD;   /* from the MIT maroon, #621B1B */
   --ut-wash:  #F4E8DB;   /* from UT's burnt orange, #BF5700 */
 
-  /* panel heading colours, the school colour let down to a tint */
-  --mit-accent: rgba(117, 0, 20, 0.36);
-  --ut-accent:  rgba(191, 87, 0, 0.36);
-
   --measure: 1140px;
   /* the project-card corner — every button and chip uses it too */
   --radius:  14px;
@@ -632,14 +628,6 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 .entry--mit { background: var(--mit-wash); }
 .entry--ut  { background: var(--ut-wash); }
 
-/* headings inside a panel speak in that school's colour, not the site forest */
-.entry--mit h2,
-.entry--mit h3,
-.entry--mit .entry-sub { color: var(--mit-accent); }
-
-.entry--ut h2,
-.entry--ut h3,
-.entry--ut .entry-sub { color: var(--ut-accent); }
 
 /* panels carry their own ground, so the rule between entries goes away */
 .detail--panels .entry + .entry {

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" width="400" height="190" role="img" aria-label="A line-drawn flower">
+  <!--
+    Petal Ping's tile. One bloom, drawn as fine line work over flat washes,
+    after the reference Elle sent: pale pink and rose petals, a dark hairline
+    outline, long thin stems, and a lot of cream left around it.
+  -->
+  <defs>
+    <linearGradient id="pp-pale" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#F1CFCA"/>
+      <stop offset="1" stop-color="#E4ADAA"/>
+    </linearGradient>
+    <linearGradient id="pp-rose" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#DF949B"/>
+      <stop offset="1" stop-color="#CD7E87"/>
+    </linearGradient>
+    <linearGradient id="pp-blush" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EFC5C0"/>
+      <stop offset="1" stop-color="#E1A9A8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="190" fill="#F7EFE6"/>
+
+  <!-- the bloom sits left of centre at just over half size, so the stems have
+       room to travel and the tile keeps its cream breathing space -->
+  <g transform="translate(34 16) scale(0.58)"
+     fill="none" stroke="#4A3A36" stroke-width="1.6"
+     stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+
+    <path d="M150 84 C123 34 68 24 42 53 C16 82 33 124 76 129 C112 133 141 113 150 84 Z"
+          fill="url(#pp-pale)" stroke-width="1.5"/>
+    <path d="M150 84 C161 30 206 10 243 27 C280 44 280 95 241 113 C204 130 160 115 150 84 Z"
+          fill="url(#pp-rose)" stroke-width="1.5"/>
+    <path d="M198 108 C228 99 258 94 276 82 C296 69 312 80 304 94 C294 112 250 126 214 120 Z"
+          fill="url(#pp-blush)" stroke-width="1.5"/>
+
+    <!-- veins fanning out of the centre -->
+    <g stroke-width="0.9" opacity="0.7">
+      <path d="M150 84 C120 70 86 56 48 51"/>
+      <path d="M150 84 C122 80 86 82 46 94"/>
+      <path d="M150 84 C120 92 92 110 73 127"/>
+      <path d="M150 84 C160 56 178 34 203 18"/>
+      <path d="M150 84 C170 62 204 44 243 30"/>
+      <path d="M150 84 C178 72 222 66 266 68"/>
+      <path d="M150 84 C182 92 226 100 272 97"/>
+    </g>
+
+    <!-- stamens -->
+    <g stroke-width="0.9">
+      <path d="M150 84 C146 70 143 58 141 48"/>
+      <path d="M150 84 C151 68 152 56 153 46"/>
+      <path d="M150 84 C157 70 163 59 169 50"/>
+      <path d="M150 84 C141 72 133 63 125 56"/>
+      <path d="M150 84 C163 75 175 68 186 63"/>
+      <path d="M150 84 C136 78 124 74 113 72"/>
+    </g>
+    <g fill="#4A3A36" stroke="none">
+      <circle cx="141" cy="47" r="2.4"/><circle cx="153" cy="45" r="2.4"/>
+      <circle cx="170" cy="49" r="2.4"/><circle cx="124" cy="55" r="2.4"/>
+      <circle cx="187" cy="62" r="2.4"/><circle cx="112" cy="71" r="2.4"/>
+      <circle cx="160" cy="52" r="1.9"/><circle cx="133" cy="51" r="1.9"/>
+      <circle cx="178" cy="55" r="1.9"/><circle cx="118" cy="63" r="1.9"/>
+    </g>
+
+    <!-- stems, crossing as they run off the bottom of the tile -->
+    <g stroke-width="1.2">
+      <path d="M152 94 C184 150 246 212 352 310"/>
+      <path d="M152 94 C196 160 232 238 240 310"/>
+      <path d="M208 170 C262 186 318 226 360 288"/>
+      <path d="M226 206 C190 226 168 258 160 310"/>
+    </g>
+  </g>
+</svg>

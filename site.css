@@ -16,6 +16,11 @@
   --sunrise: #EECB8E;
   --sunset:  #DC8672;
 
+  /* sunset lightened ~40% toward white — the section buttons, so they read as
+     the same family as the "Curious?" launcher without competing with it */
+  --blush:        #EAB6AA;
+  --blush-edge:   #E39E8E;
+
   /* grounds and ink */
   --bg:      #FAF8F3;  /* page ground — sand is too heavy full-bleed */
   --surface: #ECE9DF;  /* sand, used for rules, fills and placeholder bars */
@@ -34,6 +39,7 @@
   --card-3-ink: #6B4708;
 
   --measure: 1140px;
+  /* the project-card corner — every button and chip uses it too */
   --radius:  14px;
 }
 
@@ -277,7 +283,7 @@ a { color: inherit; }
 .tag {
   font-size: 0.8rem;
   padding: 5px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--surface);
   color: var(--body);
 }
@@ -338,7 +344,7 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   margin-top: 28px;
   padding: 11px 22px;
   border: 2px solid var(--forest);
-  border-radius: 999px;
+  border-radius: var(--radius);
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
@@ -470,7 +476,7 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: #DDE7DC;
   color: #33472F;
   font-size: 0.88rem;
@@ -493,13 +499,13 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 .tag-link {
   display: inline-block;
   text-decoration: none;
-  /* sunrise, the palette's yellow — these are the one thing on About Me
-     meant to be clicked, so they carry the only saturated colour on the page */
-  background: var(--sunrise);
+  /* a pale tint of sunset, the launcher's pink — these are the one thing on
+     About Me meant to be clicked, so they carry the page's only colour */
+  background: var(--blush);
   color: var(--body);
   font-weight: 700;
   padding: 7px 16px;
-  border: 1.5px solid #E2B870;
+  border: 1.5px solid var(--blush-edge);
   transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
 }
 
@@ -624,10 +630,10 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   font-size: 0.8rem;
   font-weight: 700;
   padding: 6px 15px;
-  border-radius: 999px;
-  background: var(--sunrise);
+  border-radius: var(--radius);
+  background: var(--blush);
   color: var(--body);
-  border: 1.5px solid #E2B870;
+  border: 1.5px solid var(--blush-edge);
   text-decoration: none;
   transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
 }

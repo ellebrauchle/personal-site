@@ -39,8 +39,8 @@
   --card-3-ink: #6B4708;
 
   /* the Education panels: each school's colour let down over the page ground */
-  --mit-wash: rgba(117, 0, 20, 0.36);
-  --ut-wash:  rgba(191, 87, 0, 0.36);
+  --mit-wash: rgba(117, 0, 20, 0.26);
+  --ut-wash:  rgba(191, 87, 0, 0.26);
 
   --measure: 1140px;
   /* the project-card corner — every button and chip uses it too */
@@ -648,6 +648,9 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 .detail--panels .entry-meta {
   display: block;
   margin-top: 4px;
+  /* the muted grey drops to ~2:1 on a tinted panel, so the date takes the
+     body ink here rather than disappearing */
+  color: var(--body);
 }
 .detail--panels h3 { margin-top: 18px; }
 .detail--panels .entry-sub { margin-top: 6px; }
@@ -658,12 +661,13 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   line-height: 1.38;
 }
 
-/* the school's mark sits above its text, at full strength */
+/* the school's mark sits above its text, centred across the panel */
 .panel-logo {
   display: block;
   width: auto;
-  height: clamp(30px, 3.4vw, 40px);
-  margin-bottom: 16px;
+  max-width: 78%;
+  height: clamp(44px, 5.4vw, 66px);
+  margin: 4px auto 22px;
 }
 
 @media (max-width: 760px) {

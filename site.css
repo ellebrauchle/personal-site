@@ -661,19 +661,18 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   line-height: 1.38;
 }
 
-/* the school's mark sits above its text, centred across the panel */
+/* The school's mark sits above its text, centred across the panel. Both marks
+   get the same box, shaped to UT's wordmark — the taller of the two aspects —
+   and sit inside it. So UT fills the box, the wider MIT lockup matches its
+   width and centres on the spare height, and the text below both panels
+   starts on the same line. */
 .panel-logo {
   display: block;
-  width: auto;
-  max-width: 78%;
-  height: clamp(44px, 5.4vw, 66px);
+  width: min(80%, 240px);
+  aspect-ratio: 1021 / 286;
+  object-fit: contain;
   margin: 4px auto 22px;
 }
-
-/* The MIT lockup is wider per unit height than UT's wordmark, so a shared
-   height would leave it the narrower mark. Match their widths instead:
-   4.28 against 3.57 means 83% of UT's height. */
-.entry--mit .panel-logo { height: clamp(37px, 4.5vw, 55px); }
 
 @media (max-width: 760px) {
   .detail--panels { grid-template-columns: 1fr; }

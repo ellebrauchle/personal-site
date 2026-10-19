@@ -1,7 +1,7 @@
 # Personal site
 
 Elle Brauchle's personal site. Static HTML and CSS, no build step, deployed on
-Vercel. The "Ask my site" chat is a small Node handler in `api/chat.js` that
+Vercel. The "Curious?" chat is a small Node handler in `api/chat.js` that
 answers from `knowledge/`.
 
 ## Where the design comes from

@@ -55,7 +55,7 @@ description or link. Nothing more about it is known.
 
 Elle built this site herself. It is a static site with no build step, written in
 plain HTML and CSS, laid out from a Claude Design direction, and deployed on
-Vercel. The "Ask my site" chat in the corner is part of it.
+Vercel. The "Curious?" chat in the corner is part of it.
 
 ## Case studies and code
 

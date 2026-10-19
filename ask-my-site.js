@@ -1,4 +1,4 @@
-/* "Ask my site" — chat launcher + panel, injected into every page.
+/* "Curious?" — chat launcher + panel, injected into every page.
    The browser only ever talks to /api/chat on this site.
 
    Restyled for direction 1a: soft radii and the forest / sand / sunset
@@ -9,7 +9,7 @@
   if (document.getElementById('ask-my-site')) return;
 
   var CSS = [
-    '.ask-my-site{--ams-forest:#255551;--ams-sand:#ECE9DF;--ams-sunset:#DC8672;',
+    '.ask-my-site{--ams-forest:#255551;--ams-sand:#ECE9DF;--ams-sunset:#DC8672;--ams-radius:14px;',
     '--ams-bg:#FAF8F3;--ams-ink:#474238;display:contents;',
     'font-family:Lato,"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;font-size:16px;line-height:1.5;text-align:left}',
     '.ask-my-site :where(h2,ul,li,p,small,form,input,button){all:revert}',
@@ -18,7 +18,7 @@
     '.ams-close svg{width:20px;height:20px}',
 
     '.ams-launcher{position:fixed;right:20px;bottom:20px;z-index:9999;display:flex;align-items:center;gap:9px;',
-    'min-height:50px;margin:0;padding:0 20px 0 16px;border:0;border-radius:999px;font-family:inherit;font-size:.85rem;',
+    'min-height:50px;margin:0;padding:0 20px 0 16px;border:0;border-radius:var(--ams-radius);font-family:inherit;font-size:.85rem;',
     'font-weight:700;letter-spacing:.06em;line-height:1;white-space:nowrap;color:#46180E;background:var(--ams-sunset);',
     'box-shadow:0 4px 14px rgba(46,43,37,.22);cursor:pointer;transition:background-color .16s ease,color .16s ease}',
     '.ams-launcher:hover{background:var(--ams-forest);color:var(--ams-bg)}',
@@ -46,9 +46,9 @@
 
     '.ams-form{display:flex;flex:none;gap:8px;margin:0;padding:12px;border-top:1px solid var(--ams-sand)}',
     '.ams-form input{flex:1;min-width:0;min-height:44px;margin:0;padding:0 14px;font-family:inherit;font-size:16px;',
-    'color:var(--ams-ink);background:#fff;border:1px solid var(--ams-sand);border-radius:999px}',
+    'color:var(--ams-ink);background:#fff;border:1px solid var(--ams-sand);border-radius:var(--ams-radius)}',
     '.ams-form input::placeholder{color:#9A9488}',
-    '.ams-form button{flex:none;min-width:72px;min-height:44px;margin:0;padding:0 18px;border:0;border-radius:999px;',
+    '.ams-form button{flex:none;min-width:72px;min-height:44px;margin:0;padding:0 18px;border:0;border-radius:var(--ams-radius);',
     'font-family:inherit;font-size:.82rem;font-weight:700;color:var(--ams-bg);background:var(--ams-forest);cursor:pointer;',
     'transition:background-color .16s ease,color .16s ease}',
     '.ams-form button:hover:not(:disabled){background:var(--ams-sunset);color:#46180E}',
@@ -68,8 +68,8 @@
   ].join('');
 
   var HTML = [
-    '<div id="ams-panel" class="ams-panel" role="dialog" aria-label="Ask my site" hidden>',
-    '<div class="ams-header"><h2 class="ams-title">Ask my site</h2>',
+    '<div id="ams-panel" class="ams-panel" role="dialog" aria-label="Curious? Chat about this site" hidden>',
+    '<div class="ams-header"><h2 class="ams-title">Curious?</h2>',
     '<button type="button" id="ams-close" class="ams-close" aria-label="Close chat">',
     '<svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     '</button></div>',
@@ -81,7 +81,7 @@
     '<button type="button" id="ams-launcher" class="ams-launcher" aria-expanded="false" aria-controls="ams-panel">',
     '<svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
     '<path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-4.5 3.5V17H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>',
-    '<span class="ams-label">Ask my site</span></button>'
+    '<span class="ams-label">Curious?</span></button>'
   ].join('');
 
   var style = document.createElement('style');

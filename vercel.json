@@ -5,6 +5,9 @@
     }
   },
   "routes": [
+    { "src": "^/(education|experience|awards|skills|interests)(?:\\.html)?$",
+      "status": 308,
+      "headers": { "Location": "/about.html#$1" } },
     { "src": "^/knowledge[^/]*(/.*)?$", "status": 404 },
     { "src": "^/dev\\.js$", "status": 404 },
     { "src": "^/test(/.*)?$", "status": 404 },

@@ -268,15 +268,6 @@ a { color: inherit; }
   margin: 12px 0 0;
 }
 
-.backlink {
-  display: inline-block;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: var(--muted);
-  margin-bottom: 14px;
-}
-
-.backlink:hover { color: var(--ink); }
 
 /* ---------------- about ---------------- */
 
@@ -491,8 +482,11 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   .nav { position: relative; }
 }
 
+html { scroll-behavior: smooth; }
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
+  html { scroll-behavior: auto; }
 }
 
 /* A card with no destination yet (Project C) shares the tile styling but
@@ -540,8 +534,25 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 /* ---------------- resume section pages ---------------- */
 
-/* The five chips under the About Me title are links, not labels. */
+/* The five chips under the About Me title are links, not labels. They share
+   the full width of the page rather than sitting at their text width, and
+   wrap once a row of five would make them too narrow to read. */
 .tags-nav { gap: 10px; }
+
+.tags-nav li {
+  display: flex;
+  flex: 1 1 150px;
+}
+
+/* the anchor fills its cell, so a label that wraps to two lines does not
+   leave the other four shorter than it */
+.tags-nav .tag-link {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 .tag-link {
   display: inline-block;
@@ -574,6 +585,21 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 .tag-link:hover::after,
 .tag-link:focus-visible::after { opacity: 1; }
+
+/* Each resume section lives on About Me now, reached from the chips above
+   rather than from a page of its own. */
+.resume-section {
+  padding-top: clamp(30px, 5vw, 54px);
+  scroll-margin-top: 18px;
+}
+
+.resume-section + .resume-section { border-top: 2px dashed var(--surface); }
+
+.section-title {
+  font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+  font-weight: 900;
+  margin-bottom: clamp(18px, 2.6vw, 28px);
+}
 
 .detail {
   max-width: 44em;
@@ -613,9 +639,19 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   margin: 8px 0 0;
 }
 
+/* the name of a school or employer -- an h2 when these were separate pages */
 .detail h3 {
-  margin-top: 26px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* the headings within one of those -- an h3 back then */
+.detail h4 {
+  margin: 26px 0 0;
   font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--forest);
 }
@@ -661,7 +697,7 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   border-top: 0;
 }
 
-.detail--panels h2 { font-size: 1.35rem; }
+.detail--panels h3 { font-size: 1.35rem; }
 
 /* UT's name is short enough to share a line with its dates while MIT's is
    not, which left the two panels disagreeing. Stack it in both. */
@@ -676,7 +712,7 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
      body ink here rather than disappearing */
   color: var(--body);
 }
-.detail--panels h3 { margin-top: 18px; }
+.detail--panels h4 { margin-top: 18px; }
 .detail--panels .entry-sub { margin-top: 6px; }
 .detail--panels ul { margin-top: 7px; }
 
@@ -738,30 +774,3 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   margin-top: 6px;
 }
 
-/* move between the five sections without going back to About */
-.sibling-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding-bottom: clamp(40px, 7vw, 70px);
-}
-
-.sibling-nav a {
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 6px 15px;
-  border-radius: var(--radius);
-  background: var(--blush);
-  color: var(--body);
-  border: 1.5px solid var(--blush-edge);
-  text-decoration: none;
-  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
-}
-
-.sibling-nav a:hover,
-.sibling-nav a:focus-visible {
-  background: var(--forest);
-  border-color: var(--forest);
-  color: var(--bg);
-  outline: none;
-}

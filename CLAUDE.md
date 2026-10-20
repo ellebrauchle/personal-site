@@ -24,9 +24,16 @@ design changes any of these, change the site to match.
 was written here from sources the design does not have, and must survive a
 re-import:
 
+**About Me is one page, not six.** The design has Education, Experience,
+Awards, Skills and Interests as separate frames, and this site had them as
+separate pages until Elle asked for them inline. The five chips under her name
+are now in-page anchors, and `vercel.json` redirects the old `/education`,
+`/experience`, `/awards`, `/skills` and `/interests` URLs to the matching
+`#section`. A re-import of the design must not split them out again.
+
 | Content | Lives in | Written from |
 | --- | --- | --- |
-| About bio and tag row | `about.html` | Elle's PM resume, Oct 2026 |
+| About bio, tag row and the five resume sections | `about.html` | Elle's PM resume, Oct 2026 |
 | Petal Ping description | `projects.html` | Her Petal Ping product brief, Sept 2026, then edited by Elle |
 | Task Nest, Project C blurbs | `index.html`, `projects.html` | The design's HOME frame |
 | Hero sentence | `index.html` | The design's HOME frame |

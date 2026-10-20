@@ -220,7 +220,7 @@ a { color: inherit; }
 /* Task Nest carries a clock on a pale green ground, the same green the repo
    pill uses. The mark is sized off the tile's height so it stays centred. */
 .project-thumb.card-2 {
-  background: #DDE7DC url("assets/task-nest.png") center / auto 52% no-repeat;
+  background: #DDE7DC url("assets/task-nest.png") center / auto 62% no-repeat;
 }
 .card-2 { background: var(--card-2); color: var(--card-2-ink); }
 .card-3 { background: var(--card-3); color: var(--card-3-ink); }

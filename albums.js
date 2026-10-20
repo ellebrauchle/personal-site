@@ -109,9 +109,10 @@
     if (n !== current) goTo(n);
   }
 
-  function goTo(n) {
-    mark(Math.min(Math.max(n, 1), photos));
-  }
+  /* the albums wrap: past the last photo is the first one again */
+  function wrap(n) { return ((n - 1) % photos + photos) % photos + 1; }
+
+  function goTo(n) { mark(wrap(n)); }
 
   function step(d) { goTo(current + d); }
 
@@ -134,7 +135,7 @@
     for (var i = 0; i < slides.length; i++) w[i] = slides[i].offsetWidth || 0;
 
     function widthAt(off) {
-      var idx = current - 1 + off;
+      var idx = wrap(current + off) - 1;
       return (w[idx] || w[current - 1] || 0) * SCALE[Math.abs(off)];
     }
 
@@ -154,7 +155,11 @@
     var left = offsets(-1), right = offsets(1);
 
     for (var j = 0; j < slides.length; j++) {
+      // the shortest way round, so the photos either side of the first one
+      // are the last ones rather than nothing at all
       var off = (j + 1) - current;
+      if (off > photos / 2) off -= photos;
+      else if (off < -photos / 2) off += photos;
       var away = Math.abs(off);
       var s = slides[j];
       if (away > depth) { s.hidden = true; continue; }

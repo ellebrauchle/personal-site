@@ -41,15 +41,17 @@ def blob(r):
     return " ".join(d) + " Z"
 
 # x, y, petal length, petals, spin, blob radius, blob offset, stem target,
-# stem bow. The first five are still gathered; the last two have come loose
-# and drift off to the right on their own stems.
+# stem bow. The first five are still gathered. The last two have come loose:
+# one keeps a stem that runs off the tile, the other has none at all, because
+# a stem that stops inside the canvas reads as a stray mark rather than a
+# flower. Every target must sit on or past an edge, or be None.
 FLOWERS = [
     ( 52,  74, 30, 5, -0.30, 25, (-12,  9), TIE,        (-34,  26)),
     (104,  44, 23, 5,  0.42, 19, (  8, 10), TIE,        (-16,  40)),
     (163,  70, 33, 6, -0.12, 27, (-10,  6), TIE,        (  4,  30)),
     (218,  40, 21, 5,  0.60, 17, (  9, 11), TIE,        ( 26,  44)),
     (263,  76, 26, 5, -0.44, 21, (  7, -8), TIE,        ( 30,  26)),
-    (326,  47, 19, 5,  0.20, 15, ( -9,  8), (352, 150), ( 30, -14)),
+    (326,  47, 19, 5,  0.20, 15, ( -9,  8), None,       ( 30, -14)),
     (360, 112, 15, 5, -0.55, 12, (  6,  9), (300, 190), (  8,  34)),
 ]
 
@@ -74,7 +76,10 @@ parts.append('  <g fill="none" stroke="#33312E" stroke-width="1.4" '
              'stroke-linecap="round" stroke-linejoin="round">')
 
 # stems first, drawn in page coordinates so they can reach a shared tie point
-for x, y, L, n, spin, br, _b, (tx, ty), (bx, by) in FLOWERS:
+for x, y, L, n, spin, br, _b, target, (bx, by) in FLOWERS:
+    if target is None:
+        continue
+    tx, ty = target
     c1 = (x + bx * 0.5, y + (ty - y) * 0.35)
     c2 = (tx + bx * 0.8, y + (ty - y) * 0.78)
     parts.append('    <path d="M %.1f %.1f C %.1f %.1f %.1f %.1f %.1f %.1f"/>'

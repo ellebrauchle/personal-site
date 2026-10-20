@@ -763,11 +763,35 @@ html { scroll-behavior: smooth; }
   background: var(--forest);
 }
 
+/* the whole card is the button that opens its album */
+.interest-open {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
 .interest img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.interest-open:hover img,
+.interest-open:focus-visible img { transform: scale(1.04); }
+
+.interest-open:focus-visible {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
 }
 
 /* a scrim under the label, so the word holds up over a bright photo */
@@ -797,6 +821,135 @@ html { scroll-behavior: smooth; }
 @media (max-width: 760px) {
   .interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ---------------- the album overlay ---------------- */
+
+body.album-open { overflow: hidden; }
+
+.album {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.album[hidden] { display: none; }
+
+.album-bar {
+  display: flex;
+  flex: none;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px clamp(16px, 4vw, 40px);
+  border-bottom: 2px dashed var(--surface);
+}
+
+.album-title { font-size: clamp(1.2rem, 2.6vw, 1.7rem); }
+.album-count { font-size: 0.85rem; color: var(--muted); margin-right: auto; }
+
+.album-close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.album-close:hover { background: var(--forest); color: var(--bg); }
+.album-close svg { width: 22px; height: 22px; }
+
+.album-grid {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  /* rows take their own height rather than sharing out the container's */
+  align-content: start;
+  gap: 10px;
+  padding: clamp(16px, 3vw, 28px);
+}
+
+.album-grid[hidden] { display: none; }
+
+/* The square comes from the button's own width via padding, not from the
+   image and not from aspect-ratio. Both of those leave the grid sizing its
+   rows against content that is itself waiting on the row, and the rows come
+   out short while the images spill over them. */
+.album-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0 0 100%;
+  border: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.album-thumb img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.album-thumb:hover img { transform: scale(1.05); }
+
+.album-thumb:focus-visible {
+  outline: 3px solid var(--forest);
+  outline-offset: 2px;
+}
+
+/* one photo, filling what the bar leaves */
+.album-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 2vw, 20px);
+  min-height: 0;
+  padding: clamp(12px, 2.5vw, 28px);
+}
+
+.album-stage[hidden] { display: none; }
+
+.album-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.album-nav {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.album-nav:hover { background: var(--forest); color: var(--bg); }
+.album-nav svg { width: 24px; height: 24px; }
 
 /* a plain row of chips, no bullets — used on Skills */
 .chip-list {

@@ -236,26 +236,37 @@
       <section class="entry">
         <h3>Outside of work</h3>
 
-        <!-- One card per interest, the label sitting over the photo. Each card
-             is waiting on its picture: drop the file into assets/ under the
-             name already written in the comment and uncomment that line. The
-             colour behind it is the placeholder until then. -->
+        <!-- One card per interest. The cover is the album's own photo and the
+             card opens that album; albums.js builds the grid from data-count,
+             reading assets/photos/<album>/01.jpg upward. -->
         <ul class="interest-grid">
           <li class="interest">
-            <!-- <img src="assets/interest-bikepacking.jpg" alt="" loading="lazy"> -->
-            <span class="interest-label">Bikepacking</span>
+            <button type="button" class="interest-open" data-album="biking"
+                    data-count="18" data-title="Bikepacking" aria-haspopup="dialog">
+              <img src="assets/photos/biking/sm/10.jpg" alt="" loading="lazy">
+              <span class="interest-label">Bikepacking</span>
+            </button>
           </li>
           <li class="interest">
-            <!-- <img src="assets/interest-backcountry-skiing.jpg" alt="" loading="lazy"> -->
-            <span class="interest-label">Backcountry skiing</span>
+            <button type="button" class="interest-open" data-album="skiing"
+                    data-count="12" data-title="Backcountry skiing" aria-haspopup="dialog">
+              <img src="assets/photos/skiing/sm/04.jpg" alt="" loading="lazy">
+              <span class="interest-label">Backcountry skiing</span>
+            </button>
           </li>
           <li class="interest">
-            <!-- <img src="assets/interest-alpine-trad-climbing.jpg" alt="" loading="lazy"> -->
-            <span class="interest-label">Alpine trad climbing</span>
+            <button type="button" class="interest-open" data-album="climbing"
+                    data-count="17" data-title="Alpine trad climbing" aria-haspopup="dialog">
+              <img src="assets/photos/climbing/sm/02.jpg" alt="" loading="lazy">
+              <span class="interest-label">Alpine trad climbing</span>
+            </button>
           </li>
           <li class="interest">
-            <!-- <img src="assets/interest-sketching-painting.jpg" alt="" loading="lazy"> -->
-            <span class="interest-label">Sketching and painting</span>
+            <button type="button" class="interest-open" data-album="art"
+                    data-count="18" data-title="Sketching and painting" aria-haspopup="dialog">
+              <img src="assets/photos/art/sm/18.jpg" alt="" loading="lazy">
+              <span class="interest-label">Sketching and painting</span>
+            </button>
           </li>
         </ul>
 
@@ -278,6 +289,7 @@
 </div>
 
 <script src="site.js"></script>
+<script src="albums.js"></script>
 <script src="ask-my-site.js"></script>
 </body>
 </html>

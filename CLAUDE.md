@@ -82,4 +82,8 @@ After editing `knowledge/`, check retrieval still works before committing.
 - Palette and spacing are tokens at the top of `site.css`. Restyle there, not in
   the pages.
 - Every page carries the same nav, footer, `site.js` and `ask-my-site.js`.
+  About Me also loads `albums.js`, which no other page needs.
+- The Interests albums are plain files under `assets/photos/<album>/`,
+  numbered `01.jpg` upward with thumbnails in `sm/`. The card's
+  `data-count` is how many there are; add a photo and raise the count.
 - Never print `.env` or any API key.

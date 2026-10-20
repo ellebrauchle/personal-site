@@ -9,8 +9,8 @@ updated 2026-10-13.
 ## Short bio
 
 Elle is an architect turned product manager. She spent six years at SmithGroup,
-an architecture, engineering and planning firm, moving from designer to licensed
-architect and lead planner to associate and project manager. She is now at MIT
+an architecture, engineering and planning firm, moving from licensed architect
+and lead planner to associate and project manager. She is now at MIT
 Sloan pursuing an MBA, class of 2028, and building software projects alongside
 the degree.
 
@@ -46,9 +46,9 @@ team in 2017. She graduated with High Honors.
 
 SmithGroup is an award-winning architecture, engineering and planning firm with
 roughly 1,600 employees and over $400 million in annual revenue. Elle worked
-there from 2020 to 2026, in three roles: Designer from 2020 to 2023, Licensed
-Architect and Lead Planner from 2023 to 2026, and Associate and Project Manager
-from 2025 to 2026.
+there from 2020 to 2026, based in San Francisco. The roles her resume lists are
+Licensed Architect and Lead Planner from 2023 to 2026, and Associate and Project
+Manager from 2025 to 2026.
 
 ## Product development and cross-functional work
 

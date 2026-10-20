@@ -31,6 +31,7 @@
   /* the three project-card fills, taken from the wireframe's HOME row */
   --card-1: #DB986C;
   --card-2: #ACA269;
+  --card-4: #BFCFC9;   /* forest, let down for the fourth tile */
   --card-3: #E3CD9B;
 
   /* ink that clears 4.5:1 on each card fill */
@@ -224,6 +225,7 @@ a { color: inherit; }
 }
 .card-2 { background: var(--card-2); color: var(--card-2-ink); }
 .card-3 { background: var(--card-3); color: var(--card-3-ink); }
+.card-4 { background: var(--card-4); color: var(--ink); }
 
 .card h3 {
   font-family: Caveat, cursive;
@@ -335,6 +337,16 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 .project h3 { font-size: 1.15rem; }
 .project p { font-size: 0.95rem; margin: 0; }
+
+/* an outbound link standing in for a project blurb */
+.project-link {
+  font-size: 0.95rem;
+  color: var(--forest);
+  text-decoration-color: color-mix(in srgb, var(--forest) 40%, transparent);
+  overflow-wrap: anywhere;
+}
+
+.project-link:hover { color: var(--sunset); }
 
 .project-go {
   font-size: 0.85rem;

@@ -1,7 +1,14 @@
 # Projects
 
-The projects Elle Brauchle shows on this site. Three are listed on the Projects
-page; the site itself is a fourth. Last updated 2026-10-13.
+The projects Elle Brauchle shows on this site. Four are listed on the Projects
+page; the site itself is a fifth. Last updated 2026-10-19.
+
+## Hackachusetts 2026
+
+Hackachusetts 2026 is listed on Elle's Projects page. The page links to the
+event at sundai.club/events/boston/hackachusetts-with-kiro and says nothing
+else about it yet, so there is nothing more to tell a visitor: point them at
+the link, or at Elle, rather than guessing what she built there.
 
 ## Petal Ping
 

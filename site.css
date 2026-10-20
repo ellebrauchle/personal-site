@@ -39,8 +39,8 @@
   --card-3-ink: #6B4708;
 
   /* the Education panels: each school's colour let down over the page ground */
-  --mit-wash: rgba(117, 0, 20, 0.35);
-  --ut-wash:  rgba(191, 87, 0, 0.35);
+  --mit-wash: rgba(117, 0, 20, 0.25);
+  --ut-wash:  rgba(191, 87, 0, 0.25);
 
   --measure: 1140px;
   /* the project-card corner — every button and chip uses it too */

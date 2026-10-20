@@ -738,6 +738,66 @@ html { scroll-behavior: smooth; }
   .detail--panels { grid-template-columns: 1fr; }
 }
 
+/* ---------------- interests: a card per pastime ---------------- */
+
+/* These run the full width rather than the 44em reading measure. */
+.detail--wide { max-width: none; }
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 20px);
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interest {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* the ground until the photo lands, and the colour behind a photo that is
+     still loading */
+  background: var(--forest);
+}
+
+.interest img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* a scrim under the label, so the word holds up over a bright photo */
+.interest::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(20, 18, 15, 0.64) 0%,
+    rgba(20, 18, 15, 0.20) 48%,
+    rgba(20, 18, 15, 0) 78%);
+}
+
+.interest-label {
+  position: absolute;
+  z-index: 1;
+  right: 14px;
+  bottom: 12px;
+  left: 14px;
+  color: #fff;
+  font-size: clamp(0.88rem, 1.4vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+@media (max-width: 760px) {
+  .interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* a plain row of chips, no bullets — used on Skills */
 .chip-list {
   display: flex;

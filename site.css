@@ -227,6 +227,12 @@ a { color: inherit; }
 .card-3 { background: var(--card-3); color: var(--card-3-ink); }
 .card-4 { background: var(--card-4); color: var(--ink); }
 
+/* Hackachusetts' tile is the event's own artwork, cropped to the band the
+   tile shows. The flat colour stays as the ground while the photo loads. */
+.project-thumb.card-4 {
+  background: var(--card-4) url("assets/hackachusetts.jpg") center / cover no-repeat;
+}
+
 .card h3 {
   font-family: Caveat, cursive;
   font-size: 1.9rem;

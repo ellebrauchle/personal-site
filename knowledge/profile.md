@@ -15,8 +15,8 @@ Sloan pursuing an MBA, class of 2028, and building software projects alongside
 the degree.
 
 In her own words: "I'm an architect turned product manager looking to use my
-cross-functional collaboration, design, organization, and leadership skills to
-build better products for users that need them."
+user-centric thinking, cross-functional collaboration, and design skills to
+build better products for users."
 
 ## Education
 

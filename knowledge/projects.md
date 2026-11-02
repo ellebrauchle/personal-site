@@ -1,14 +1,22 @@
 # Projects
 
 The projects Elle Brauchle shows on this site. Four are listed on the Projects
-page; the site itself is a fifth. Last updated 2026-10-19.
+page; the site itself is a fifth. Last updated 2026-10-24.
 
-## Hackachusetts 2026
+## Hackachusetts 2026: heat island planning tool
 
-Hackachusetts 2026 is listed on Elle's Projects page. The page links to the
-event at sundai.club/events/boston/hackachusetts-with-kiro and says nothing
-else about it yet, so there is nothing more to tell a visitor: point them at
-the link, or at Elle, rather than guessing what she built there.
+At Hackachusetts 2026, a Boston hackathon run by Sundai, Elle and her teammate
+Ronaldo Fernandes built a heat island planning tool for city officials. Boston's
+hottest afternoons are not evenly hot: the neighborhoods with the least tree
+canopy run several degrees warmer than ones that can afford shade.
+
+The tool lets an official track the current state of the heat island effect
+across Boston neighborhoods, hear from residents about outdoor comfort, and use
+a simulator to see how actions such as planting trees, tree mix, cool roofs and
+budget affect those temperatures.
+
+The Projects page links to the event at
+sundai.club/events/boston/hackachusetts-with-kiro.
 
 ## Petal Ping
 

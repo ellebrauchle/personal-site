@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 190" width="400" height="190"
+     role="img" aria-label="A stack of envelopes drawn in heavy black outline">
+  <!--
+    Envelopes' tile: three envelopes in a loose stack, heavy black outline,
+    in the same yellow-green as the Granola mark. Hand-drawn, not generated
+    the way petal-ping.svg is, so edit this file directly.
+  -->
+  <rect width="400" height="190" fill="#EAF1D9"/>
+
+  <!-- The tile crops this drawing to a squarer frame, so the stack is pulled
+       in from the edges and the outline is heavy enough to survive it. -->
+  <g transform="translate(200 95) scale(0.92) translate(-200 -95)"
+     stroke="#111111" stroke-width="9" stroke-linejoin="round" stroke-linecap="round">
+
+    <!-- back envelope, corner showing past the top right -->
+    <g transform="translate(243 62) rotate(-13)" fill="#CFDC80">
+      <rect x="-92" y="-58" width="184" height="116" rx="7"/>
+      <path d="M -92 -58 L 0 14 L 92 -58" fill="none"/>
+    </g>
+
+    <!-- the one slipping out at the bottom -->
+    <g transform="translate(205 142) rotate(7)" fill="#CFDC80">
+      <rect x="-92" y="-54" width="184" height="108" rx="7"/>
+    </g>
+
+    <!-- front envelope, flap and stamp -->
+    <g transform="translate(182 100) rotate(-3)" fill="#CFDC80">
+      <rect x="-96" y="-60" width="192" height="120" rx="7"/>
+      <path d="M -96 -60 L 0 16 L 96 -60" fill="none"/>
+      <rect x="-74" y="-2" width="48" height="48" rx="3" fill="#FFFFFF"/>
+    </g>
+
+  </g>
+</svg>

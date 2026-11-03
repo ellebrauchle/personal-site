@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360"
+     role="img" aria-label="A clock face">
+  <!--
+    Task Nest's tile: the same clock the PNG carried, redrawn as a line
+    drawing so its colour lives in this file. Purple on the pale purple
+    ground the tile supplies.
+  -->
+  <g fill="none" stroke="#4C2E70" stroke-width="30" stroke-linecap="round">
+    <circle cx="180" cy="180" r="150"/>
+
+    <!-- hands: straight up, and down to the right -->
+    <path d="M 180 180 L 180 52" stroke-width="24"/>
+    <path d="M 180 180 L 266 218" stroke-width="24"/>
+
+    <!-- ticks at nine, three and six; the one at twelve sits under the hand -->
+    <path d="M 56 180 L 74 180" stroke-width="24"/>
+    <path d="M 286 180 L 304 180" stroke-width="24"/>
+    <path d="M 180 286 L 180 304" stroke-width="24"/>
+  </g>
+</svg>

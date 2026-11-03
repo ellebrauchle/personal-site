@@ -31,13 +31,13 @@
 
   /* the three project-card fills, taken from the wireframe's HOME row */
   --card-1: #DB986C;
-  --card-2: #ACA269;
+  --card-2: #B3A3CC;
   --card-4: #BFCFC9;   /* forest, let down for the fourth tile */
   --card-3: #E3CD9B;
 
   /* ink that clears 4.5:1 on each card fill */
   --card-1-ink: #5A2E0F;
-  --card-2-ink: #33381C;
+  --card-2-ink: #2E1F45;
   --card-3-ink: #6B4708;
 
   /* the Education panels: each school's colour let down over the page ground */
@@ -219,13 +219,19 @@ a { color: inherit; }
   background: #F7EFE6 url("assets/petal-ping.svg") center / cover no-repeat;
 }
 
-/* Task Nest carries a clock on a pale green ground, the same green the repo
-   pill uses. The mark is sized off the tile's height so it stays centred. */
+/* Task Nest carries a clock on a pale purple ground. The mark is sized off
+   the tile's height so it stays centred. */
 .project-thumb.card-2 {
-  background: #DDE7DC url("assets/task-nest.png") center / auto 62% no-repeat;
+  background: #E4DCF0 url("assets/task-nest.svg") center / auto 62% no-repeat;
 }
 .card-2 { background: var(--card-2); color: var(--card-2-ink); }
 .card-3 { background: var(--card-3); color: var(--card-3-ink); }
+
+/* Envelopes carries a drawn stack of envelopes on a pale green ground, the
+   same yellow-green as the drawing. The ground shows while the SVG loads. */
+.project-thumb.card-3 {
+  background: #EAF1D9 url("assets/envelopes.svg") center / cover no-repeat;
+}
 .card-4 { background: var(--card-4); color: var(--ink); }
 
 /* Hackachusetts' tile is the event's own artwork, cropped to the band the

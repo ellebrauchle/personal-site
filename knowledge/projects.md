@@ -61,10 +61,13 @@ Task Nest is Elle's collection of productivity tools, ranging from email
 condensers to job trackers. It is a set of small tools rather than one product.
 There is no public case study or live link for it yet.
 
-## Project C
+## Envelopes
 
-Project C is unannounced. The site says only "Stay tuned!" and gives no name,
-description or link. Nothing more about it is known.
+Envelopes is Elle's unannounced project, shown on the Projects page as a card
+with a drawing of a stack of envelopes. It has a name and nothing else: the
+card says only "Stay tuned!", with no description, link or release date. The
+name was previously the placeholder "Project C". Anyone curious should ask Elle
+directly rather than read anything into the name.
 
 ## This website
 

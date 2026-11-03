@@ -84,9 +84,10 @@ Committee.
 
 ## What work is shown on the site?
 
-Three projects: Petal Ping, a cycle notification app; Task Nest, a set of
-productivity tools; and Project C, which is unannounced. The site itself is a
-fourth thing she built.
+Four projects: Hackachusetts 2026, a heat island planning tool for Boston city
+officials; Petal Ping, a cycle notification app; Task Nest, a set of
+productivity tools; and Envelopes, which is unannounced. The site itself is a
+fifth thing she built.
 
 ## Can I read a case study on a project?
 

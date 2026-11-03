@@ -45,7 +45,9 @@ them back into tiles that go nowhere.
 | About bio, tag row and the five resume sections | `about.html` | Elle's PM resume, Oct 2026 |
 | Petal Ping description and page | `projects.html`, `petal-ping.html` | Her Petal Ping product brief, Sept 2026, then edited by Elle |
 | Hackachusetts description and page | `projects.html`, `hackachusetts.html` | The team's repo and `docs/idea.md`, Oct 2026 |
-| Task Nest and Envelopes blurbs | `projects.html`, and their own pages | The design's HOME frame; Envelopes is a name and nothing more |
+| Envelopes description | `projects.html`, `envelopes.html` | Written by Elle, Nov 2026 |
+| Task Nest blurb | `projects.html`, `task-nest.html` | The design's HOME frame |
+| The Curated Shelf blurb | `projects.html`, `curated-shelf.html` | Read off the cover art Elle supplied; she has not described it yet |
 | Hero sentence and bio | `index.html` | The design's HOME frame, reworded by Elle |
 | Contact details and invitation | `contact.html` | Real addresses |
 | Everything the chat widget knows | `knowledge/*.md` | Resume and product brief |

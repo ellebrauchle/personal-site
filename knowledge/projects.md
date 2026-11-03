@@ -1,8 +1,19 @@
 # Projects
 
-The projects Elle Brauchle shows on this site. Four are listed on the Projects
-page, each with its own page behind the card; the site itself is a fifth.
+The projects Elle Brauchle shows on this site. Five are listed on the Projects
+page, each with its own page behind the card; the site itself is a sixth.
 Last updated 2026-11-02.
+
+## The Curated Shelf
+
+The Curated Shelf is Elle's personal collection of things she wants to try,
+kept in bins: a Book Bin, a Restaurant Bin, and so on. Its cover calls it
+"Vol. I — Personal Collection" and "something new to try". Each shelf fills up
+with what is waiting, and a plus button adds something new.
+
+She built it with Lovable. Its page on the site is curated-shelf.html. There is
+no public link or repo for it yet, and no fuller write-up, so anyone wanting
+detail should ask Elle.
 
 ## Hackachusetts 2026: heat island planning tool
 

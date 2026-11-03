@@ -34,11 +34,13 @@
   --card-2: #B3A3CC;
   --card-4: #BFCFC9;   /* forest, let down for the fourth tile */
   --card-3: #E3CD9B;
+  --card-5: #EBE2D5;   /* the cream ground of the Curated Shelf cover */
 
   /* ink that clears 4.5:1 on each card fill */
   --card-1-ink: #5A2E0F;
   --card-2-ink: #2E1F45;
   --card-3-ink: #6B4708;
+  --card-5-ink: #5A3A14;
 
   /* the Education panels: each school's colour let down over the page ground */
   --mit-wash: rgba(117, 0, 20, 0.25);
@@ -237,6 +239,14 @@ a { color: inherit; }
   background: #EAF1D9 url("assets/envelopes.svg") center / cover no-repeat;
 }
 .card-4 { background: var(--card-4); color: var(--ink); }
+.card-5 { background: var(--card-5); color: var(--card-5-ink); }
+
+/* The Curated Shelf's tile is the cover art. It is a tall image on a wide
+   tile, so it is anchored to the top, where the masthead is. */
+.project-thumb.card-5,
+.case-hero.card-5 {
+  background: var(--card-5) url("assets/curated-shelf.webp") center top / cover no-repeat;
+}
 
 /* Hackachusetts' tile is the event's own artwork, cropped to the band the
    tile shows. The flat colour stays as the ground while the photo loads. */

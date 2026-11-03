@@ -85,17 +85,19 @@ Committee.
 
 ## What work is shown on the site?
 
-Four projects: Hackachusetts 2026, a heat island planning tool for Boston city
-officials; Petal Ping, a cycle notification app; Task Nest, a set of
-productivity tools; and Envelopes, a budgeting tool built on a Google Sheet.
-The site itself is a fifth thing she built.
+Five projects: The Curated Shelf, a personal collection of things to try;
+Hackachusetts 2026, a heat island planning tool for Boston city officials;
+Petal Ping, a cycle notification app; Task Nest, a set of productivity tools;
+and Envelopes, a budgeting tool built on a Google Sheet. The site itself is a
+sixth thing she built.
 
 ## Can I read a case study on a project? Project pages
 
 Yes. Every project card on the Projects page links to its own page:
-hackachusetts.html, petal-ping.html, envelopes.html and task-nest.html. The
-Hackachusetts, Petal Ping and Envelopes pages carry full descriptions; the
-Task Nest page is short, because there is little to say about it yet.
+curated-shelf.html, hackachusetts.html, petal-ping.html, envelopes.html and
+task-nest.html. The Hackachusetts, Petal Ping and Envelopes pages carry full
+descriptions; the Task Nest and Curated Shelf pages are short, because there is
+little to say about them yet.
 Petal Ping's page links to its code at github.com/ellebrauchle/Cycle-Tracking.
 Hackachusetts' page links both to its code at
 github.com/ronaldo-pinheiro1998/Hackachusetts_RE and to the Sundai event. The

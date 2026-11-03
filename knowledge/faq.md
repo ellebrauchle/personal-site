@@ -13,9 +13,10 @@ SmithGroup, an architecture, engineering and planning firm.
 ## What does she do, and what is she looking for?
 
 She describes herself as an architect turned product manager, looking to use her
-cross-functional collaboration, design, organization and leadership skills to
-build better products for users that need them. Her resume is targeted at
-product management roles.
+user-centric thinking, cross-functional collaboration and design skills to build
+better products for users. She is aiming at product management roles, most of
+all at companies where design carries real weight, and is preparing for a summer
+internship to test that in practice.
 
 ## Why did she move from architecture to product management?
 

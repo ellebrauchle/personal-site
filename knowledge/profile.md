@@ -3,20 +3,58 @@
 Elle Brauchle is a product manager and licensed architect, currently an MBA
 candidate at the MIT Sloan School of Management, class of 2028.
 
-Source: Elle's PM resume (October 2026) and the pages of this site. Last
-updated 2026-11-02.
+Source: Elle's PM resume (October 31 2026), the bio she dictated for the About
+page in November 2026, and the pages of this site. Last updated 2026-11-02.
 
 ## Short bio
 
-Elle is an architect turned product manager. She spent six years at SmithGroup,
-an architecture, engineering and planning firm, moving from designer to
-architect and lead planner to project manager. She is now at MIT
-Sloan pursuing an MBA, class of 2028, and building software projects alongside
-the degree.
+Elle is an architect turned product manager. She is a first-year MBA student at
+MIT Sloan, class of 2028, headed for product management, and she is building
+software projects alongside the degree. Before that she spent six years at
+SmithGroup in San Francisco as an architect and urban planner, starting as a
+designer, earning her architecture license, and being promoted to project
+manager and associate.
 
 In her own words: "I'm an architect turned product manager looking to use my
 user-centric thinking, cross-functional collaboration, and design skills to
 build better products for users."
+
+## What kind of product role Elle wants
+
+Elle is aiming at product management, most of all at companies where design
+carries real weight, because her own background is design. She is still working
+out which career paths fit what she is after, and is preparing for a summer
+internship where she can test some of that in practice.
+
+## Why Elle went back to business school
+
+She wanted more agency over the product than architecture gave her, and more
+ability to iterate, and to iterate quickly. She also likes learning and wanted
+to fill gaps in her business thinking and data analytics.
+
+## What Elle liked about architecture
+
+The cross-functional collaboration, the design thinking, the obsession with the
+people who would use the thing, and the plain fact of building something. Her
+architecture work was mostly large hospitals and higher education facilities,
+along with campus master planning.
+
+## Elle's interest in AI and design
+
+Elle is particularly interested in the role AI plays in design. Design matters
+to her, and she treats human experience as the reason anything gets built at
+all, so she spends time on AI capability, AI security, and what AI does to
+design practice.
+
+She thinks people will want to use AI in very different ways: some with no
+manual design at all, some wanting a heavy hand on the controls. The problem
+that interests her is building for that whole range without flattening it. She
+wants the tools we make to promote creativity rather than replace it.
+
+## What Elle is best at
+
+Taking a complicated problem and distilling it into a simple framework or
+process that people can move forward on.
 
 ## Education
 

@@ -160,8 +160,9 @@ Visit Committee, which support young professionals pursuing licensure.
 
 ## Skills and tools
 
-Claude Code, Claude Design, Figma, A/B testing, user research, prototyping, and
-ArcGIS. She is a Registered California Architect, license number C 40528.
+Claude Code, Claude Design, Figma, A/B testing, user research, prototyping,
+Adobe Suite, Power BI, Revit, Rhino, and ArcGIS. She is a Registered California
+Architect, license number C 40528.
 
 ## Interests and volunteering
 

@@ -86,18 +86,19 @@ Committee.
 
 Four projects: Hackachusetts 2026, a heat island planning tool for Boston city
 officials; Petal Ping, a cycle notification app; Task Nest, a set of
-productivity tools; and Envelopes, which is unannounced. The site itself is a
-fifth thing she built.
+productivity tools; and Envelopes, a budgeting tool built on a Google Sheet.
+The site itself is a fifth thing she built.
 
 ## Can I read a case study on a project? Project pages
 
 Yes. Every project card on the Projects page links to its own page:
 hackachusetts.html, petal-ping.html, envelopes.html and task-nest.html. The
-Hackachusetts and Petal Ping pages are full write-ups; the Task Nest and
-Envelopes pages are short, because there is little to say about them yet.
-Petal Ping's page links to its code at github.com/ellebrauchle/Cycle-Tracking,
-and Hackachusetts' page links to the Sundai event. The Projects page also links
-to her GitHub profile at github.com/ellebrauchle.
+Hackachusetts, Petal Ping and Envelopes pages carry full descriptions; the
+Task Nest page is short, because there is little to say about it yet.
+Petal Ping's page links to its code at github.com/ellebrauchle/Cycle-Tracking.
+Hackachusetts' page links both to its code at
+github.com/ronaldo-pinheiro1998/Hackachusetts_RE and to the Sundai event. The
+Projects page also links to her GitHub profile at github.com/ellebrauchle.
 
 ## How do I get in touch?
 

@@ -432,6 +432,18 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   outline: none;
 }
 
+/* Two pills at the foot of a case study: the code on the left, where the eye
+   lands first, and the outbound link to its right. They stack on a narrow
+   screen rather than squeezing. */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.pill-row .pill { margin-top: 28px; }
+
 .pill-solid {
   background: var(--sunset);
   border-color: var(--sunset);

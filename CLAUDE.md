@@ -50,6 +50,12 @@ them back into tiles that go nowhere.
 | Contact details and invitation | `contact.html` | Real addresses |
 | Everything the chat widget knows | `knowledge/*.md` | Resume and product brief |
 
+**Two project repos are linked from their pages.** Petal Ping's
+(`ellebrauchle/Cycle-Tracking`) is public. Hackachusetts'
+(`ronaldo-pinheiro1998/Hackachusetts_RE`) was still private when Elle asked for
+the link on Nov 2 2026, so that "View code" pill 404s for visitors until the
+repo is opened up. Check before assuming it works.
+
 **The design still contains placeholder copy** — "Here is my bio ....", "Your
 text here", "Your Name", "Tag · Tag · Year". Never implement those. If a design
 frame has placeholder text where this site has real text, the site wins and the
@@ -68,10 +74,6 @@ silently pick one. Say so and let Elle choose.
 5. Verify every page in the browser, including at 375px, before reporting done.
 
 ## Not on this site, deliberately
-
-The Hackachusetts repo. It is private, so `hackachusetts.html` links the Sundai
-event instead of carrying a "View code" pill. Petal Ping's repo
-(`ellebrauchle/Cycle-Tracking`) is public and is linked.
 
 Elle's phone number and home address. They are on her resume; they do not belong
 on a public page. `knowledge/boundaries.md` also tells the chat widget to refuse

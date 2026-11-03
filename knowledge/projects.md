@@ -66,14 +66,30 @@ condensers to job trackers. It is a set of small tools rather than one product.
 It has its own page on the site, task-nest.html, but that page is short: there
 is no public repo, live link or write-up for it yet.
 
-## Envelopes
+## Envelopes: envelope budgeting in a Google Sheet
 
-Envelopes is Elle's unannounced project, shown on the Projects page as a card
-with a drawing of a stack of envelopes. It has a name and nothing else: the
-card says only "Stay tuned!", with no description, link or release date, and
-its page at envelopes.html says the same. The name was previously the
-placeholder "Project C". Anyone curious should ask Elle directly rather than
-read anything into the name.
+Envelopes is Elle's personal budgeting tool. It brings the classic envelope
+budgeting method into an automated Google Sheet: money is divided between
+monthly spending categories, or "envelopes", and the sheet tracks how much is
+left in each one.
+
+It securely pulls transactions from credit cards and Venmo through the Plaid
+API, and sorts each charge into a category using customizable rules, so the
+categorizing is not done by hand.
+
+## Envelopes: how it runs
+
+Envelopes is built with Google Apps Script. It runs on a daily schedule and
+sends email alerts when a spending category approaches its limit, which turns
+a manual spreadsheet into a hands-off system for staying on budget.
+
+Its page on the site is envelopes.html. There is no public repo for it yet.
+
+## Project C is the old name for Envelopes
+
+The card now called Envelopes was labelled "Project C" while the project was
+unannounced. Project C is not a separate project; anyone asking about Project C
+means Envelopes.
 
 ## This website
 

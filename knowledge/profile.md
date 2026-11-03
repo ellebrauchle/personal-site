@@ -4,13 +4,13 @@ Elle Brauchle is a product manager and licensed architect, currently an MBA
 candidate at the MIT Sloan School of Management, class of 2028.
 
 Source: Elle's PM resume (October 2026) and the pages of this site. Last
-updated 2026-10-13.
+updated 2026-11-02.
 
 ## Short bio
 
 Elle is an architect turned product manager. She spent six years at SmithGroup,
-an architecture, engineering and planning firm, moving from licensed architect
-and lead planner to associate and project manager. She is now at MIT
+an architecture, engineering and planning firm, moving from designer to
+architect and lead planner to project manager. She is now at MIT
 Sloan pursuing an MBA, class of 2028, and building software projects alongside
 the degree.
 
@@ -47,8 +47,8 @@ team in 2017. She graduated with High Honors.
 SmithGroup is an award-winning architecture, engineering and planning firm with
 roughly 1,600 employees and over $400 million in annual revenue. Elle worked
 there from 2020 to 2026, based in San Francisco. The roles her resume lists are
-Licensed Architect and Lead Planner from 2023 to 2026, and Associate and Project
-Manager from 2025 to 2026.
+Designer from 2020 to 2022, Architect and Lead Planner from 2022 to 2026, and
+Project Manager from 2025 to 2026.
 
 ## Product development and cross-functional work
 
@@ -57,8 +57,8 @@ $3.7 billion, 909,000 square foot, 14-story hospital, resolving competing
 priorities and high-stakes tradeoffs to keep the product at the forefront and
 schedules on track.
 
-She facilitated more than 12 sprints and sprint planning sessions with
-engineering, marketing and design.
+She facilitated more than 12 design charrette sessions with engineering,
+marketing and design.
 
 She partnered with data science teams to build a tool that collected and
 consolidated multi-form data from user outreach into an interactive dashboard for
@@ -85,7 +85,7 @@ She partnered with regional leadership and marketing on quarterly market roadmap
 prioritization, assessing competitive positioning and setting OKRs to guide
 go/no-go decisions in support of a $2 million annual market target.
 
-## Stakeholder engagement and communication
+## Go to market and stakeholder engagement
 
 Elle synthesized complex, multi-source data from user surveys, stakeholder input
 and research into visual and written narratives for executive audiences, securing

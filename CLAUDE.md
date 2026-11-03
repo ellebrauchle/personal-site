@@ -47,7 +47,7 @@ them back into tiles that go nowhere.
 | Hackachusetts description and page | `projects.html`, `hackachusetts.html` | The team's repo and `docs/idea.md`, Oct 2026 |
 | Envelopes description | `projects.html`, `envelopes.html` | Written by Elle, Nov 2026 |
 | Task Nest blurb | `projects.html`, `task-nest.html` | The design's HOME frame |
-| The Curated Shelf blurb | `projects.html`, `curated-shelf.html` | Read off the cover art Elle supplied; she has not described it yet |
+| The Curated Shelf description and page | `projects.html`, `curated-shelf.html` | Elle's own repo description, her screenshots, and the repo README |
 | Hero sentence and bio | `index.html` | The design's HOME frame, reworded by Elle |
 | Contact details and invitation | `contact.html` | Real addresses |
 | Everything the chat widget knows | `knowledge/*.md` | Resume and product brief |
@@ -56,7 +56,14 @@ them back into tiles that go nowhere.
 (`ellebrauchle/Cycle-Tracking`) is public. Hackachusetts'
 (`ronaldo-pinheiro1998/Hackachusetts_RE`) was still private when Elle asked for
 the link on Nov 2 2026, so that "View code" pill 404s for visitors until the
-repo is opened up. Check before assuming it works.
+repo is opened up. Check before assuming it works. The Curated Shelf's
+(`ellebrauchle/The-Curated-Shelf_Loveable_1hr-Session`) is public.
+
+**The Curated Shelf page carries screenshots.** They live in `assets/` beside
+the cover art and use the `.case-shots` grid: two portrait shots pair up and a
+wide one spans both columns. It is the one project page with a second prose
+block after the images, which is why `.case-body--tail` exists &mdash; it keeps
+that block from adding a second helping of the minimum height.
 
 **The design still contains placeholder copy** — "Here is my bio ....", "Your
 text here", "Your Name", "Tag · Tag · Year". Never implement those. If a design

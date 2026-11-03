@@ -4,16 +4,31 @@ The projects Elle Brauchle shows on this site. Five are listed on the Projects
 page, each with its own page behind the card; the site itself is a sixth.
 Last updated 2026-11-02.
 
-## The Curated Shelf
+## The Curated Shelf: recommendations from friends in one place
 
-The Curated Shelf is Elle's personal collection of things she wants to try,
-kept in bins: a Book Bin, a Restaurant Bin, and so on. Its cover calls it
-"Vol. I — Personal Collection" and "something new to try". Each shelf fills up
-with what is waiting, and a plus button adds something new.
+In Elle's words, The Curated Shelf is "a curated digital interface storing all
+of my recommendations from friends in one place, a shelf for me to visit later
+or share with others". Its cover calls it "Vol. I — Personal Collection" and
+"something new to try".
 
-She built it with Lovable. Its page on the site is curated-shelf.html. There is
-no public link or repo for it yet, and no fuller write-up, so anyone wanting
-detail should ask Elle.
+The shelf is divided into bins: books, movies, TV shows, music, restaurants and
+recipes. Each bin fills with what is waiting, and a plus button adds something
+new. A "New rec" button picks one when she cannot choose.
+
+## The Curated Shelf: who recommended it, and why
+
+Adding something to the shelf asks three things: what it is, who recommended
+it, and why they did. A bin opens onto a rotating set of featured picks and
+then the full bin with its count, and each card carries the cover art, the
+recommender, their note, and Elle's own star rating once she has got to it.
+
+## The Curated Shelf: how it was built
+
+Elle built it with Lovable in a one-hour session, on TanStack Start, React,
+TypeScript and Tailwind. The code is public at
+github.com/ellebrauchle/The-Curated-Shelf_Loveable_1hr-Session, and its page on
+this site is curated-shelf.html, which carries screenshots of the shelf, the
+"New rec" form and the Movies bin.
 
 ## Hackachusetts 2026: heat island planning tool
 

@@ -85,7 +85,7 @@ Committee.
 
 ## What work is shown on the site?
 
-Five projects: The Curated Shelf, a personal collection of things to try;
+Five projects: The Curated Shelf, a shelf for recommendations from friends;
 Hackachusetts 2026, a heat island planning tool for Boston city officials;
 Petal Ping, a cycle notification app; Task Nest, a set of productivity tools;
 and Envelopes, a budgeting tool built on a Google Sheet. The site itself is a
@@ -96,9 +96,11 @@ sixth thing she built.
 Yes. Every project card on the Projects page links to its own page:
 curated-shelf.html, hackachusetts.html, petal-ping.html, envelopes.html and
 task-nest.html. The Hackachusetts, Petal Ping and Envelopes pages carry full
-descriptions; the Task Nest and Curated Shelf pages are short, because there is
-little to say about them yet.
-Petal Ping's page links to its code at github.com/ellebrauchle/Cycle-Tracking.
+descriptions, and the Curated Shelf page also carries screenshots; the Task
+Nest page is short, because there is little to say about it yet.
+Petal Ping's page links to its code at github.com/ellebrauchle/Cycle-Tracking,
+and The Curated Shelf's links to
+github.com/ellebrauchle/The-Curated-Shelf_Loveable_1hr-Session.
 Hackachusetts' page links both to its code at
 github.com/ronaldo-pinheiro1998/Hackachusetts_RE and to the Sundai event. The
 Projects page also links to her GitHub profile at github.com/ellebrauchle.

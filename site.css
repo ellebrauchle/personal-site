@@ -419,6 +419,13 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   min-height: 42vh;
 }
 
+/* A page that resumes its prose after a row of screenshots needs the measure
+   again, but not a second helping of that minimum height. */
+.case-body--tail {
+  min-height: 0;
+  padding-top: 0;
+}
+
 .case-body h2 { margin-top: 34px; }
 .case-body p  { margin: 12px 0 0; }
 
@@ -453,6 +460,34 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 }
 
 .pill-row .pill { margin-top: 28px; }
+
+/* Screenshots on a case-study page. They sit outside .case-body, which is
+   held to a reading measure, so they can use the full page width. Two
+   portrait shots pair up; a wide one spans both columns. */
+.case-shots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: start;
+  padding-bottom: clamp(40px, 7vw, 80px);
+}
+
+.case-shot { margin: 0; }
+.case-shot--wide { grid-column: 1 / -1; }
+
+.case-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.case-shot figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
 
 .pill-solid {
   background: var(--sunset);
@@ -515,7 +550,7 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
   .hero-photo { order: -1; max-width: 220px; }
   .about { grid-template-columns: 1fr; }
   .about-photo { max-width: 260px; }
-  .cards, .project-grid { grid-template-columns: 1fr; }
+  .cards, .project-grid, .case-shots { grid-template-columns: 1fr; }
 }
 
 /* the nav collapses to ☰, as the wireframe note calls for */

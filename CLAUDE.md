@@ -31,12 +31,22 @@ are now in-page anchors, and `vercel.json` redirects the old `/education`,
 `/experience`, `/awards`, `/skills` and `/interests` URLs to the matching
 `#section`. A re-import of the design must not split them out again.
 
+**Each project has its own page.** The design's PROJECTS frame has no detail
+frame behind the tiles. The four pages — `hackachusetts.html`,
+`petal-ping.html`, `envelopes.html`, `task-nest.html` — follow a wireframe Elle
+supplied in Nov 2026: back link, title, a chip and a year, the project's own
+artwork as a hero, the write-up, then an outbound pill. They are built from the
+`case study` styles that were already in `site.css` and unused. Each card on
+the index is an `<a>` onto its page. A re-import of the design must not flatten
+them back into tiles that go nowhere.
+
 | Content | Lives in | Written from |
 | --- | --- | --- |
 | About bio, tag row and the five resume sections | `about.html` | Elle's PM resume, Oct 2026 |
-| Petal Ping description | `projects.html` | Her Petal Ping product brief, Sept 2026, then edited by Elle |
-| Task Nest, Project C blurbs | `index.html`, `projects.html` | The design's HOME frame |
-| Hero sentence | `index.html` | The design's HOME frame |
+| Petal Ping description and page | `projects.html`, `petal-ping.html` | Her Petal Ping product brief, Sept 2026, then edited by Elle |
+| Hackachusetts description and page | `projects.html`, `hackachusetts.html` | The team's repo and `docs/idea.md`, Oct 2026 |
+| Task Nest and Envelopes blurbs | `projects.html`, and their own pages | The design's HOME frame; Envelopes is a name and nothing more |
+| Hero sentence and bio | `index.html` | The design's HOME frame, reworded by Elle |
 | Contact details and invitation | `contact.html` | Real addresses |
 | Everything the chat widget knows | `knowledge/*.md` | Resume and product brief |
 
@@ -58,6 +68,10 @@ silently pick one. Say so and let Elle choose.
 5. Verify every page in the browser, including at 375px, before reporting done.
 
 ## Not on this site, deliberately
+
+The Hackachusetts repo. It is private, so `hackachusetts.html` links the Sundai
+event instead of carrying a "View code" pill. Petal Ping's repo
+(`ellebrauchle/Cycle-Tracking`) is public and is linked.
 
 Elle's phone number and home address. They are on her resume; they do not belong
 on a public page. `knowledge/boundaries.md` also tells the chat widget to refuse

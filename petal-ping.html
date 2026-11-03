@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petal Ping — Elle Brauchle</title>
+<meta name="description" content="Petal Ping: a cycle and symptom tool that turns health app data into notifications worth having.">
+
+<!--
+  ============================================================
+  PETAL PING — project page
+
+  Copy comes from the product brief of Sept 30 2026 by way of
+  knowledge/projects.md, and from the blurb Elle edited on the
+  Projects index. Keep the two in step.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">Elle Brauchle</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <a class="back-link" href="projects.html">&#8592; All projects</a>
+
+  <div class="page-head page-head--case">
+    <h1>Petal Ping</h1>
+    <ul class="tags case-meta">
+      <li class="tag tag-accent">Solo build</li>
+      <li class="case-year">2026</li>
+    </ul>
+  </div>
+
+  <div class="case-hero card-1"></div>
+
+  <div class="case-body">
+    <p>
+      A health tool that pulls sleep metrics, menstrual cycles, and recorded
+      symptoms from the health apps you use, and turns that data into
+      notifications to keep you at your best: a heads-up before a cycle starts,
+      the symptoms that may come with it, research-backed tips, and an alert
+      when a trend appears. It learns as it goes &mdash; not just your health
+      data, but how you like to be notified and which alerts you find useful.
+      <em>Your</em> tool, for <em>your</em> life, built to benefit <em>you</em>.
+    </p>
+
+    <h2>Why I built it</h2>
+    <p>
+      The tools that exist are either too limited or too costly. Apple Health
+      predicts a cycle but barely lets you log a symptom; the apps that do it
+      properly, like Flo, generally want paying. I wanted a free one that fit
+      the way I actually live, and I wanted to learn to build software rather
+      than wait for someone else to build it.
+    </p>
+
+    <h2>How it fits together</h2>
+    <p>
+      It connects to the health apps a person already uses &mdash; Apple
+      Health, Flo, Natural Cycles &mdash; rather than asking them to start
+      logging somewhere new. A companion app shows the history, with an export
+      for medical appointments, so a pattern you have noticed is something you
+      can hand to a doctor.
+    </p>
+
+    <h2>Where it stands</h2>
+    <p>
+      The current sprint, for the AI Builder Space Proseminar at MIT Sloan, is
+      the smallest useful version: pull real cycle and symptom data from a
+      health app, send predictive heads-up notifications, deliver
+      research-backed tips. Trend alerts, the medical export and the full
+      companion app are out of scope for now. Cycle tracking works month by
+      month, so predictive accuracy is not something a single sprint can
+      validate.
+    </p>
+
+    <h2>Open questions</h2>
+    <p>
+      Which app serves as the data source, given how hard Apple Health is to
+      integrate with. Whether data can be pulled automatically or only by
+      manual export. How often a notification should arrive before it becomes
+      noise. How to fold what a user tells me back into the alerts they get.
+    </p>
+
+    <p>
+      It starts as a tool for me, with room to grow for anyone managing periods
+      &mdash; especially irregular or difficult ones &mdash; and eventually for
+      other things worth tracking.
+    </p>
+
+    <a class="pill" href="https://github.com/ellebrauchle/Cycle-Tracking" rel="noopener">
+      View code <span aria-hidden="true">&#8599;</span>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <span>&copy; 2026 Elle Brauchle</span>
+    <span><a href="contact.html">Get in touch</a></span>
+  </footer>
+
+</div>
+
+<script src="site.js"></script>
+<script src="ask-my-site.js"></script>
+</body>
+</html>

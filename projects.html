@@ -11,10 +11,11 @@
   PROJECTS — direction 1a
 
   The design's PROJECTS frame shows three tiles (title + one line)
-  and a single GitHub pill in the bottom-right corner — no per-card
-  link labels, so the cards here are not individually linked. When a
-  project gets a case study or a public repo, turn its tile into an
-  <a> and give it its own destination.
+  and a single GitHub pill in the bottom-right corner. Each card is
+  now an <a> onto its own page — hackachusetts.html, petal-ping.html,
+  envelopes.html, task-nest.html — which the design does not have a
+  frame for; those pages follow the wireframe Elle supplied, built
+  from the case-study styles already in site.css.
   ============================================================
 -->
 
@@ -54,7 +55,7 @@
 
   <div class="project-grid">
 
-    <article class="project">
+    <a class="project" href="hackachusetts.html">
       <div class="project-thumb card-4"></div>
       <h3>Hackachusetts 2026</h3>
       <p>
@@ -67,15 +68,10 @@
         and utilize a simulator to see how actions such as planting trees, tree
         mix, cool roofs, and budget affect these temperatures.
       </p>
-      <p>
-        <a class="project-link" href="https://www.sundai.club/events/boston/hackachusetts-with-kiro" rel="noopener">
-          sundai.club/events/boston/hackachusetts-with-kiro
-          <span aria-hidden="true">&#8599;</span>
-        </a>
-      </p>
-    </article>
+      <p class="project-go">Read more &#8594;</p>
+    </a>
 
-    <article class="project">
+    <a class="project" href="petal-ping.html">
       <div class="project-thumb card-1"></div>
       <h3>Petal Ping</h3>
       <p>
@@ -88,19 +84,22 @@
         find useful. <em>Your</em> tool, for <em>your</em> life, built to
         benefit <em>you</em>.
       </p>
-    </article>
+      <p class="project-go">Read more &#8594;</p>
+    </a>
 
-    <article class="project">
+    <a class="project" href="envelopes.html">
       <div class="project-thumb card-3"></div>
       <h3>Envelopes</h3>
       <p>Stay tuned!</p>
-    </article>
+      <p class="project-go">Read more &#8594;</p>
+    </a>
 
-    <article class="project">
+    <a class="project" href="task-nest.html">
       <div class="project-thumb card-2"></div>
       <h3>Task Nest</h3>
       <p>Various productivity tools, from email condensers to job trackers.</p>
-    </article>
+      <p class="project-go">Read more &#8594;</p>
+    </a>
 
   </div>
 

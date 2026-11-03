@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hackachusetts 2026 — Elle Brauchle</title>
+<meta name="description" content="A heat island planning tool for Boston city officials, built at Hackachusetts 2026 with Ronaldo Fernandes.">
+
+<!--
+  ============================================================
+  HACKACHUSETTS 2026 — project page
+
+  Written from the team's own repo and pitch, Oct 2026. The repo is
+  private, so there is no "View code" button here; the Sundai event
+  page is the only public destination.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">Elle Brauchle</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About Me</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <a class="back-link" href="projects.html">&#8592; All projects</a>
+
+  <div class="page-head page-head--case">
+    <h1>Hackachusetts 2026</h1>
+    <ul class="tags case-meta">
+      <li class="tag tag-accent">Hackathon</li>
+      <li class="case-year">2026</li>
+    </ul>
+  </div>
+
+  <div class="case-hero card-4"></div>
+
+  <div class="case-body">
+    <p>
+      Boston&rsquo;s hottest afternoons aren&rsquo;t evenly hot: the neighborhoods
+      with the least tree canopy run several degrees warmer than ones that can
+      afford shade. Built at Hackachusetts 2026 with my teammate Ronaldo
+      Fernandes, this planning tool is designed for city officials to track the
+      current state of the heat island effect across all Boston neighborhoods,
+      hear from residents on how they are feeling about the outdoor comfort, and
+      utilize a simulator to see how actions such as planting trees, tree mix,
+      cool roofs, and budget affect these temperatures.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      The simulator is modelled on En-ROADS: controls along the bottom,
+      consequences on top, updating as you drag. A planner sets a budget, picks
+      a neighborhood, chooses a tree mix and a planting horizon, and watches the
+      cooling curve move in response.
+    </p>
+
+    <h2>Showing the lag</h2>
+    <p>
+      Cooling is plotted year by year across thirty years of canopy growth, with
+      a marker every four years for a mayoral term. A tree planted today cools a
+      street decades from now, and the official approving it serves four years.
+      That gap is the point of the tool rather than a footnote to it.
+    </p>
+
+    <h2>Pricing the alternative</h2>
+    <p>
+      Every scenario is matched against a cool-roof programme sized to deliver
+      the same cooling. Paint is cheaper per degree and works this summer; trees
+      take decades and bring shade, stormwater capture and air quality that
+      paint does not. Both columns are shown, and the tool declines to pick
+      between them.
+    </p>
+
+    <h2>Carrying what residents said</h2>
+    <p>
+      A feedback rail pins resident comments to the map &mdash; too hot, no
+      shade, a bus stop with nowhere to stand, a park that is needed &mdash; so
+      the numbers are not the only evidence in the room when a decision gets
+      made.
+    </p>
+
+    <p>
+      Built for Sundai&rsquo;s civic action track. The model is a handful of
+      named constants and visible arithmetic, deliberately, so a planner
+      challenged in a public meeting can say where each figure came from.
+    </p>
+
+    <a class="pill" href="https://www.sundai.club/events/boston/hackachusetts-with-kiro" rel="noopener">
+      The event <span aria-hidden="true">&#8599;</span>
+    </a>
+  </div>
+
+  <footer class="foot">
+    <span>&copy; 2026 Elle Brauchle</span>
+    <span><a href="contact.html">Get in touch</a></span>
+  </footer>
+
+</div>
+
+<script src="site.js"></script>
+<script src="ask-my-site.js"></script>
+</body>
+</html>

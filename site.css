@@ -214,14 +214,17 @@ a { color: inherit; }
 .card-1 { background: var(--card-1); color: var(--card-1-ink); }
 
 /* Petal Ping's tile is a drawing, not a flat fill. The colour underneath
-   still shows while the SVG loads. */
-.project-thumb.card-1 {
+   still shows while the SVG loads. Each of these four rules also dresses the
+   matching case-study hero, so a project's artwork follows it to its page. */
+.project-thumb.card-1,
+.case-hero.card-1 {
   background: #F7EFE6 url("assets/petal-ping.svg") center / cover no-repeat;
 }
 
 /* Task Nest carries a clock on a pale purple ground. The mark is sized off
    the tile's height so it stays centred. */
-.project-thumb.card-2 {
+.project-thumb.card-2,
+.case-hero.card-2 {
   background: #E4DCF0 url("assets/task-nest.svg") center / auto 62% no-repeat;
 }
 .card-2 { background: var(--card-2); color: var(--card-2-ink); }
@@ -229,14 +232,16 @@ a { color: inherit; }
 
 /* Envelopes carries a drawn stack of envelopes on a pale green ground, the
    same yellow-green as the drawing. The ground shows while the SVG loads. */
-.project-thumb.card-3 {
+.project-thumb.card-3,
+.case-hero.card-3 {
   background: #EAF1D9 url("assets/envelopes.svg") center / cover no-repeat;
 }
 .card-4 { background: var(--card-4); color: var(--ink); }
 
 /* Hackachusetts' tile is the event's own artwork, cropped to the band the
    tile shows. The flat colour stays as the ground while the photo loads. */
-.project-thumb.card-4 {
+.project-thumb.card-4,
+.case-hero.card-4 {
   background: var(--card-4) url("assets/hackachusetts.jpg") center / cover no-repeat;
 }
 
@@ -360,6 +365,36 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 
 /* ---------------- case study ---------------- */
 
+/* The way back to the index, above the title. It sits where the page-head's
+   top padding would be, so that padding is taken off on these pages. */
+.back-link {
+  display: inline-block;
+  margin-top: clamp(22px, 4vw, 40px);
+  font-size: 0.95rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--forest);
+  outline: none;
+}
+
+.page-head--case { padding-block: 10px clamp(18px, 2.5vw, 28px); }
+
+/* what kind of project it was, and when */
+.case-meta {
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.case-year {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .case-hero {
   height: clamp(180px, 28vw, 300px);
   border-radius: var(--radius);
@@ -369,6 +404,9 @@ a.project:hover .project-thumb { transform: translateY(-3px); }
 .case-body {
   max-width: 34em;
   padding-bottom: clamp(40px, 7vw, 80px);
+  /* A project with only a paragraph or two would otherwise end high enough
+     that the footer lands under the "Curious?" launcher in the corner. */
+  min-height: 42vh;
 }
 
 .case-body h2 { margin-top: 34px; }

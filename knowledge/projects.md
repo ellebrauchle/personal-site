@@ -1,7 +1,8 @@
 # Projects
 
 The projects Elle Brauchle shows on this site. Four are listed on the Projects
-page; the site itself is a fifth. Last updated 2026-10-24.
+page, each with its own page behind the card; the site itself is a fifth.
+Last updated 2026-11-02.
 
 ## Hackachusetts 2026: heat island planning tool
 
@@ -26,6 +27,9 @@ symptoms and deliver tailored push notifications. Those are heads-up reminders
 for upcoming cycles or symptoms, research-backed health tips, and alerts when a
 longer-term trend emerges. A companion app displays the history, with an export
 option for medical appointments.
+
+Petal Ping's page on the site is petal-ping.html, and it links to the code at
+github.com/ellebrauchle/Cycle-Tracking.
 
 Elle is building it solo, as a free alternative to tools that are either too
 limited or too costly. Apple Health offers basic cycle prediction with limited
@@ -59,15 +63,17 @@ fold user feedback into the alerts. The product brief is dated September 30,
 
 Task Nest is Elle's collection of productivity tools, ranging from email
 condensers to job trackers. It is a set of small tools rather than one product.
-There is no public case study or live link for it yet.
+It has its own page on the site, task-nest.html, but that page is short: there
+is no public repo, live link or write-up for it yet.
 
 ## Envelopes
 
 Envelopes is Elle's unannounced project, shown on the Projects page as a card
 with a drawing of a stack of envelopes. It has a name and nothing else: the
-card says only "Stay tuned!", with no description, link or release date. The
-name was previously the placeholder "Project C". Anyone curious should ask Elle
-directly rather than read anything into the name.
+card says only "Stay tuned!", with no description, link or release date, and
+its page at envelopes.html says the same. The name was previously the
+placeholder "Project C". Anyone curious should ask Elle directly rather than
+read anything into the name.
 
 ## This website
 

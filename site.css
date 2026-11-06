@@ -35,12 +35,14 @@
   --card-4: #BFCFC9;   /* forest, let down for the fourth tile */
   --card-3: #E3CD9B;
   --card-5: #EBE2D5;   /* the cream ground of the Curated Shelf cover */
+  --card-6: #F5D547;   /* placeholder yellow, standing in for VisuALL's artwork */
 
   /* ink that clears 4.5:1 on each card fill */
   --card-1-ink: #5A2E0F;
   --card-2-ink: #2E1F45;
   --card-3-ink: #6B4708;
   --card-5-ink: #5A3A14;
+  --card-6-ink: #5A4300;
 
   /* the Education panels: each school's colour let down over the page ground */
   --mit-wash: rgba(117, 0, 20, 0.25);
@@ -87,6 +89,11 @@ a { color: inherit; }
 
 /* the handwriting face is an accent only — never running text */
 .script { font-family: Caveat, cursive; }
+
+/* a formal connected script, a second accent face. Caveat is a marker hand;
+   this is the copperplate kind of cursive. So far only VisuALL's name uses
+   it, so Great Vibes is loaded on projects.html alone. */
+.script-formal { font-family: "Great Vibes", cursive; }
 
 /* ---------------- top nav ---------------- */
 
@@ -240,6 +247,7 @@ a { color: inherit; }
 }
 .card-4 { background: var(--card-4); color: var(--ink); }
 .card-5 { background: var(--card-5); color: var(--card-5-ink); }
+.card-6 { background: var(--card-6); color: var(--card-6-ink); }
 
 /* The Curated Shelf's tile is the cover art. It is a tall image on a wide
    tile, so it is anchored to the top, where the masthead is. */
@@ -355,6 +363,15 @@ a { color: inherit; }
 a.project:hover .project-thumb { transform: translateY(-3px); }
 
 .project h3 { font-size: 1.15rem; }
+
+/* VisuALL sets its "all" in the formal script. Great Vibes has a small
+   x-height beside Lato, so the inline span is scaled up to meet the cap
+   height of "Visu", and it ships in one weight only. */
+.project h3 .script-formal {
+  font-size: 1.7em;
+  font-weight: 400;
+  line-height: 1;
+}
 .project p { font-size: 0.95rem; margin: 0; }
 
 /* an outbound link standing in for a project blurb */
